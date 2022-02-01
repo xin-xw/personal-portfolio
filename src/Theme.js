@@ -34,14 +34,14 @@ const overrides = {
     bold: 900
   }
 }
-const Theme = extendTheme({
+const theme = extendTheme({
   // fonts: {
   //   heading: "IBM Plex Sans",
   //   body: "IBM Plex Sans"
   // },
   fonts: {
-    heading: "Roboto",
-    body: "Roboto"
+    heading: "Inter",
+    body: "IBM Plex Sans"
   },
   overrides,
   breakpoints,
@@ -49,4 +49,4 @@ const Theme = extendTheme({
   styles,
 })
 
-export default Theme
+export default theme

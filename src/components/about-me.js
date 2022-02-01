@@ -1,6 +1,6 @@
-
-import { Stack, Heading, Flex, Box, Text, Image, useMediaQuery, Spacer, colorMode, useColorMode  } from '@chakra-ui/react';
+import { Stack, Heading, Flex, Box, Text, Image, useMediaQuery, Spacer, colorMode, Button, useColorMode  } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
+import NextLink from 'next/link';
 import React from 'react'
 
 export default function AboutMe() {
@@ -23,14 +23,27 @@ export default function AboutMe() {
               borderRadius='full'
               backgroundColor="transparent" 
               boxShadow="md"
-              width="100px"
-              height="100px"
-              mt="20"
+              width="125px"
+              height="125px"
+              mt="5"
               display={isMinWidth ? "none" : "block"}/>
-            <Box mt={isMinWidth ? 7 : 5}>
-              <Heading fontSize="4xl" fontWeight="bold">Hey, I'm Xin. 👋</Heading>
-              <Text my={2}>Incoming Software Engineer @ <strong>VMware</strong></Text>
-              <Text my={2} color={isDark ? "gray.200" : "gray.500"}>UCR '22 Computer Science w/ Business Applications</Text>
+              
+              <Box mt={isMinWidth ? 7 : 5}>
+              <Heading fontSize="5xl" fontWeight="bold">Xin Wang</Heading>
+              
+              <Text my={2}>Incoming Software Engineer @ {' '}   
+              <NextLink href="https://www.vmware.com" passHref>
+                <Button
+                as="a"
+                target="_blank"
+                fontWeight="normal"
+                variant="link">
+                <strong><u>VMware</u></strong>
+                </Button>
+              </NextLink>
+              </Text>
+
+              <Text my={2} color={isDark ? "gray.200" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
             </Box>
             {/* Desktop Display */}
             <Spacer/>
@@ -40,8 +53,8 @@ export default function AboutMe() {
               borderRadius='full'
               backgroundColor="transparent" 
               boxShadow="md"
-              width="125px"
-              height="125px"
+              width="145px"
+              height="145px"
               my="auto"
               mx="auto"
               display={isMinWidth ? "block" : "none"}/>
