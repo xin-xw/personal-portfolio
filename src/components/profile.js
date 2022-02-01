@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import NextLink from 'next/link';
 import React from 'react'
 
-export default function AboutMe() {
+export default function Profile() {
   const isDark = colorMode == 'dark';
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
@@ -34,7 +34,7 @@ export default function AboutMe() {
               <Box mt={isMinWidth ? 5 : 3}>
               <Heading fontSize="4xl" fontWeight="bold">Xin Wang</Heading>
               
-              <Text my={2.5}>Incoming Software Engineer @ {' '}   
+              <Text my={1}>Incoming Software Engineer @ {' '}   
               <NextLink href="https://www.vmware.com" passHref>
                 <Button
                 as="a"
@@ -46,7 +46,7 @@ export default function AboutMe() {
               </NextLink>
               </Text>
 
-              <Text my={2.5} color={isDark ? "gray.200" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
+              <Text my={2} color={isDark ? "gray.200" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
             </Box>
             {/* Desktop Display */}
             <Spacer/>

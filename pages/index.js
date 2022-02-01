@@ -4,7 +4,7 @@ import {
   Box,
   Spacer,
 } from '@chakra-ui/react'
-import AboutMe from '../src/components/about-me'
+import Profile from '../src/components/profile'
 import Header from '../src/components/header'
 import Bio from '../src/components/bio'
 import FeaturedWorks from '../src/components/featured-works'
@@ -23,7 +23,6 @@ export default function Home() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
-
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -34,7 +33,7 @@ export default function Home() {
     <Center>
       <Container>
         <Box w="100%" mt={2}><Header/></Box>
-        <Box w="100%" mb="3rem"><AboutMe /></Box>
+        <Box w="100%" mb="3rem"><Profile /></Box>
         <Box w="100%" my="3rem"><Bio /></Box>
         <Box w="100%" my="3rem"><FeaturedWorks/></Box>
         <Box w="100%" my="3rem"><CurrentDoings/></Box>

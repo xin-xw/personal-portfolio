@@ -7,9 +7,9 @@ function ProjectCardItem({ title, desc, icon, ...rest }) {
   const colors = useColorModeValue('#fff', '#000')
   const bgColors = useColorModeValue('linear-gradient(315deg, #485461 0%, #28313b 74%)', 'none')
   return (
-    <Flex direction="column">
+    <Flex direction="column" >
       <Box
-        maxHeight="500px"
+        maxHeight="350px"
         p={3}
         color={[bgColors]}
         bgColor={[bgColors]}
@@ -17,15 +17,23 @@ function ProjectCardItem({ title, desc, icon, ...rest }) {
         {...rest}
       >
         
-        <Center>
-        <VStack>
+        {/* <Center> */}
+        
         <HStack>
-          <Image width="50px" height="50px" src={icon} alt={title} p={1}></Image>  
-          <Heading fontSize='2xl'>{title}</Heading>
+          <Image width="60px" height="60px" src={icon} alt={title} p={0}></Image>  
+          <Stack>
+            <Box p={2}>
+            <Heading fontSize='xl'>{title}</Heading>
+            <Text>{desc}</Text>
+            </Box>
+          </Stack>
+          
+          
         </HStack>
-        <Text>{desc}</Text>
-        </VStack>
-      </Center>
+          
+        
+        
+      {/* </Center> */}
       
       </Box>
     
@@ -46,23 +54,23 @@ export default function FeaturedWorks() {
   return (
     <Flex>
     <Stack>
-      <Box my={2.5}> <Heading fontSize="3xl" fontWeight="bold">Featured Works</Heading> </Box>
-      <Stack direction={isMinWidth ? "row" : "column"} spacing={3} align="center">
+      <Box my={2.5}> <Heading fontSize="3xl" fontWeight="bold">Recent Projects</Heading> </Box>
+      <Stack direction={isMinWidth ? "column" : "column"} spacing={5} align="center">
         <ProjectCardItem 
         title="Explorify" 
-        desc="Explorify aims to unleash the potential of their API. Provided your favorite songs, Explorify aims to recommend you other similar tracks (if there is sufficient information). But, the cool thing is - Spotify's API also allows you to customize your final matches with specific track attributes such as: danceability, energy, popularity, tempo, and more."
+        desc="Explorify aims to unleash the potential of Spotify's API. Provided your favorite songs, Explorify aims to recommend you other similar tracks based on specific track attributes."
         icon="/explorify.svg"
         ></ProjectCardItem>
         
         <ProjectCardItem 
         title="$plice" 
-        desc="Spotify provides developers a Recommendation API that can be found here, disguised away from the public audience. Essentially, Explorify aims to unleash the potential of their API. Provided your favorite songs, Explorify aims to recommend you other similar tracks (if there is sufficient information). But, the cool thing is - Spotify's API also allows you to customize your final matches with specific track attributes such as: danceability, energy, popularity, tempo, and more." 
+        desc="The premise of this application entails the idea to easily split the check when dining out with friends or family. Users can select the restaurant they choose and the menu for the respective restaurant will display. Each user will select the food they ordered and pass it along to the next person, and the total for each user will output."
         icon="/explorify.svg"
         ></ProjectCardItem>
         
         <ProjectCardItem 
-        title="Portfolio Version 1" 
-        desc="Spotify provides developers a Recommendation API that can be found here, disguised away from the public audience. Essentially, Explorify aims to unleash the potential of their API. Provided your favorite songs, Explorify aims to recommend you other similar tracks (if there is sufficient information). But, the cool thing is - Spotify's API also allows you to customize your final matches with specific track attributes such as: danceability, energy, popularity, tempo, and more." 
+        title="Portfolio (Past)" 
+        desc= "During Spring Break 2021, I took my first venture towards front-end development and learned ReactJS, HTML, CSS, and Sass and created my first portfolio. Ever since then, I really do enjoy the short-term gratification React.js gives me with their instant compile and reload feature."
         icon="/explorify.svg"
         ></ProjectCardItem>
       </Stack>
