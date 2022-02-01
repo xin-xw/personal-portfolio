@@ -14,36 +14,34 @@ const breakpoints = createBreakpoints({
 
 const config = {
   initialColorMode: 'dark',
-  useSystemColorMode: false,
+  useSystemColorMode: true,
 }
 
 const styles = {
     global: (props) => ({
       body: {
-        bg: mode('white', '#121212')(props),
-        color: mode('#121212', 'white')(props),
+        bg: mode('#f9fafb', '#121212')(props),
+        color: mode('black', 'white')(props),
+        fontSize: '15px',
       },
     }),
   }
 
-const overrides = {
-  fontWeights:
-  {
-    normal: 400,
-    medium: 700,
-    bold: 900
-  }
-}
-const theme = extendTheme({
-  // fonts: {
-  //   heading: "IBM Plex Sans",
-  //   body: "IBM Plex Sans"
-  // },
+const fonts = {
   fonts: {
     heading: "Inter",
-    body: "IBM Plex Sans"
+    body: "Roboto"
   },
-  overrides,
+  fontWeights:
+  {
+    normal: 300,
+    medium: 600,
+    bold: 800
+  }
+}
+
+const theme = extendTheme({
+  fonts,
   breakpoints,
   config,
   styles,
