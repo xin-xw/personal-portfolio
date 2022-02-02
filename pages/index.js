@@ -3,6 +3,7 @@ import {
   Center,
   Box,
   Spacer,
+  useMediaQuery
 } from '@chakra-ui/react'
 import Profile from '../src/components/profile'
 import Header from '../src/components/header'
@@ -15,6 +16,15 @@ import {useState, useEffect} from 'react'
 import NextLink from 'next/link'
 
 export default function Home() {
+  const [desktopQuery] = useMediaQuery("(min-width: 700px)");
+  const [isMinWidth, setIsMinWidth] = useState(false);
+  
+  useEffect(() => {
+    if(desktopQuery !== isMinWidth){
+      setIsMinWidth(desktopQuery);
+    }
+  }, [isMinWidth, desktopQuery])
+
   const [scrollPosition, setScrollPosition] = useState(0);
   const handleScroll = () => {
         const position = window.pageYOffset;
@@ -32,9 +42,9 @@ export default function Home() {
     
     <Center>
       <Container>
-        <Box w="100%" mt={2}><Header/></Box>
-        <Box w="100%" mb="3rem"><Profile /></Box>
-        <Box w="100%" my="3rem"><Bio /></Box>
+        <Box w="100%" mb={2}><Header/></Box>
+        <Box w="100%"><Profile /></Box>
+        <Box w="100%" mt={isMinWidth ? "-4rem" : "0rem"} mb="3rem"><Bio /></Box>
         <Box w="100%" my="3rem"><FeaturedWorks/></Box>
         <Box w="100%" my="3rem"><CurrentDoings/></Box>
         <Box w="100%" my="3rem"><PastDoings/></Box>
