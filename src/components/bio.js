@@ -16,7 +16,7 @@ export default function Bio() {
   return (
   <Flex>
   <Stack>
-      <Box my={2.5}> <Heading fontSize="3xl" fontWeight="bold">Bio</Heading> </Box>
+      <Box my={1}> <Heading fontSize="3xl" fontWeight="bold">Bio</Heading> </Box>
       <VStack >
       <Box textAlign="justify">
       <Text>

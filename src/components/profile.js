@@ -17,23 +17,24 @@ export default function Profile() {
   return (
         <Stack>
           <Flex 
-          direction={isMinWidth ? "row" : "column"} mt={isMinWidth ? 0 : 0}>
+          direction={isMinWidth ? "row" : "column"} mt={isMinWidth ? 15 : 0}>
             {/* Mobile Display */}
 
             <Image
-              src="/AvatarImg.jpg"
+              // src="/AvatarImg.jpg"
+              src="/xin-profile-mobile.svg"
               alt="Profile Picture"
               borderRadius='full'
               backgroundColor="transparent" 
-              boxShadow="lg"
-              width="110px"
-              height="110px"
+              boxShadow="none"
+              width="100px"
+              height="160px"
               mt="3"
               display={isMinWidth ? "none" : "block"}/>
-            
-              <Box mt={isMinWidth ? 5 : 3}>
-              <Heading fontSize="4xl" fontWeight="bold">Xin Wang</Heading>
+
               
+              <Box my={isMinWidth ? 20 : 3} >
+              <Heading fontSize="4xl" fontWeight="bold">Xin Wang</Heading>
               <Text my={1}>Incoming Software Engineer @ {' '}   
               <NextLink href="https://www.vmware.com" passHref>
                 <Button
@@ -45,20 +46,20 @@ export default function Profile() {
                 </Button>
               </NextLink>
               </Text>
-
-              <Text my={2} color={isDark ? "gray.200" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
+              <Text my={1} color={isDark ? "gray.200" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
             </Box>
+            
             {/* Desktop Display */}
             <Spacer/>
             <Image
-              src="/AvatarImg.jpg"
+              // src="/AvatarImg.jpg"
+              src="/xin-profile-desktop.svg"
               alt="Profile Picture"
-              borderRadius='full'
+              // borderRadius='full'
               backgroundColor="transparent" 
-              boxShadow="lg"
-              width="150px"
-              height="150px"
-              my="auto"
+              boxShadow="none"
+              height="370px"
+              mt="auto"
               mx="auto"
               display={isMinWidth ? "block" : "none"}/>
           </Flex>
