@@ -37,7 +37,7 @@ const fonts = {
     normal: 300,
     medium: 600,
     bold: 800
-  }
+  }, 
 }
 
 const theme = extendTheme({

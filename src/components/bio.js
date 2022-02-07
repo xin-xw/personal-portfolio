@@ -1,4 +1,4 @@
-import { VStack, Stack, Heading, Flex, Box, Text, Image, useMediaQuery, Center, IconButton, Button, Spacer, colorMode, useColorMode  } from '@chakra-ui/react';
+import { VStack, Stack, Heading, Flex, Box, Text, useMediaQuery, Center  } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import React from 'react'
 import SocialMediaIcons from './social-media-icons.js';
@@ -20,11 +20,11 @@ export default function Bio() {
       <VStack >
       <Box textAlign="justify">
       <Text>
-        Hello! I’m Xin (pronounced like “Shin”) 👋 - 
+        Hi 👋 I’m Xin (pronounced like “Shin”)  - 
         I have a simple goal: to build great things with great people while having a great time.
         I enjoy learning, expanding my arsenal of toolsets, and using my knowledge to aid and impact others in any way possible. 
         </Text>
-        </Box>
+      </Box>
       
       <Box textAlign="justify">
        <Text>

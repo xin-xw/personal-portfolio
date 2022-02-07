@@ -34,19 +34,9 @@ export default function Profile() {
 
               
               <Box my={isMinWidth ? 20 : 3} >
-              <Heading fontSize="4xl" fontWeight="bold">Xin Wang</Heading>
-              <Text my={1}>Incoming Software Engineer @ {' '}   
-              <NextLink href="https://www.vmware.com" passHref>
-                <Button
-                as="a"
-                target="_blank"
-                fontWeight="normal"
-                variant="link">
-                <strong><u>VMware</u></strong>
-                </Button>
-              </NextLink>
-              </Text>
-              <Text my={1} color={isDark ? "gray.200" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
+              <Heading fontSize="4xl" fontWeight="bold">{'Xin Wang'}</Heading>
+              <Text my={1}>{'Incoming Software Engineer @ VMware'}</Text>
+              <Text my={1} color={isDark ? "gray.00" : "gray.500"}>📍 Los Angeles Metropolitan Area</Text>
             </Box>
             
             {/* Desktop Display */}
