@@ -10,6 +10,7 @@ function TextLink ({link, name, icon, ...rest})
   return (
     <u>
     <NextLink href={link} passHref>
+    
       <IconButton
       as="a"
       rightIcon={icon}
@@ -21,6 +22,7 @@ function TextLink ({link, name, icon, ...rest})
       
       <Text fontSize="15px" fontWeight="bold" color={colorMode === 'dark' ? "white" : "dark"}>{name}</Text>
       </IconButton>
+
     </NextLink>
     </u>
   )
@@ -39,7 +41,6 @@ export default function PastDoings() {
   
   return (
     <Flex direction="column">
-    
       <Box my={1}> 
         <Heading fontSize="3xl" fontWeight="bold">
           Past
@@ -49,7 +50,7 @@ export default function PastDoings() {
         <Flex align="flex-start" direction="column">
           <Box textAlign="justify" my={1}>
             <Text>
-              {'• '}<strong>{'Best Valentine\'s Day Hack & Best Design (UI)'}</strong>{' out of 150+ participants @ '}
+              {'• '}<strong>{'Best Valentine\'s Day Hack & Best Design (UI)'}</strong>{' out of 160+ participants @ '}
               <TextLink link="https://hackbu.org" name="HackBU 2022" icon={<ExternalLinkIcon/>}></TextLink>
               {' for creating '}
               <TextLink link="https://github.com/xinwng/HACKBU2022" name="Spotability" icon={<ExternalLinkIcon/>}>
@@ -59,24 +60,28 @@ export default function PastDoings() {
 
           <Box textAlign="justify" my={1}>
             <Text>
-              {'• '}<strong>{'Invited participant @ JP Morgan Chase & Co.\'s'}</strong>{' '}
+              {'• '} <strong>Invited Contestant</strong> {' @ '} <strong>{'JP Morgan Chase & Co.\'s'}</strong>{' '}
               <TextLink link="https://careers.jpmorgan.com/us/en/students/programs/code-for-good" name="Code for Good" icon={<ExternalLinkIcon/>}></TextLink>
-              {' creating a full-stack application utilizing Flask, React.js, and SQLite to iterate, develop, and provide an interface for a non-profit organization (GLSEN) sourcing bullying and harassment policies across education agencies nationwide'}
+              {' - creating a full-stack app that utilizes: Flask, React.js, and SQLite to iterate, develop, and provide an interface for non-profit organization (GLSEN) that attempts to source bullying and harassment policies across education agencies nationwide'}
             </Text>
           </Box>
 
           <Box textAlign="justify" my={1}>
             <Text>
               {'• '}<strong>{'Software Engineer Intern'}</strong>{' @ '}
+
               <TextLink link="https://vistendo.com/" name="Vistendo" icon={<ExternalLinkIcon/>}></TextLink>
-              {', receiving lots and lots of guidance and mentorship on front-end programming, AWS, SFTP & SCP protocols - and how they all tie in together to help Vistendo achieve their mission'}
+
+              {', receiving lots of guidance and mentorship learning front-end programming (React.js), AWS, SFTP & SCP protocols - and tying new knowledge and technologies together to help Vistendo progress in their PWA development '}
             </Text>
           </Box>
 
           <Box textAlign="justify" my={1}>
             <Text>
               {'• '}<strong>{'Computer Scientist & Subteam Co-Lead'}</strong>{' @ '}
-              <TextLink link="https://vistendo.com/" name="NASA L'Space MCA" icon={<ExternalLinkIcon/>}></TextLink>
+
+              <TextLink link="https://www.lspace.asu.edu/" name="NASA L'Space MCA" icon={<ExternalLinkIcon/>}/>
+              
               {' researching and designing a payload system with a group of students, exploring the Venusian atmosphere and abiding by a $250 million budget constraint'}
             </Text>
           </Box>

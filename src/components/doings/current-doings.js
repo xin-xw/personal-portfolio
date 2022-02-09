@@ -18,8 +18,8 @@ function TextLink ({link, name, icon, ...rest})
       variant="link"
       color={colorMode === 'dark' ? "white" : "dark"}
       _hover={colorMode === 'dark' ? "blue" : "dark"}>
-      
-      <Text fontSize="15px" fontWeight="bold" color={colorMode === 'dark' ? "white" : "dark"}>{name}</Text>
+      <Text fontSize="15px" fontWeight="bold" color={colorMode === 'dark' ? "white" : "dark"}>{name}
+      </Text>
       </IconButton>
     </NextLink>
     </u>
@@ -48,6 +48,13 @@ export default function CurrentDoings() {
         <Flex align="flex-start" direction="column">
           <Box textAlign="justify" my={1}>
             <Text>
+              {'• '}<strong>{'Full-time Computer Science with Business Applications Student'}</strong>{' @ '}
+              <TextLink link="https://www.ucr.edu" name="UCR" icon={<ExternalLinkIcon/>}></TextLink>
+            </Text>
+          </Box>
+
+          <Box textAlign="justify" my={1}>
+            <Text>
               {'• '}<strong>{'Incoming Software Engineer'}</strong>{' @ '}
               <TextLink link="https://www.vmware.com" name="VMware" icon={<ExternalLinkIcon/>}></TextLink>
             </Text>
@@ -55,15 +62,8 @@ export default function CurrentDoings() {
 
           <Box textAlign="justify" my={1}>
             <Text>
-              {'• '}<strong>{'Full-time Computer Science with Business Applications student'}</strong>{' @ '}
-              <TextLink link="https://www.ucr.edu" name="UCR" icon={<ExternalLinkIcon/>}></TextLink>
-            </Text>
-          </Box>
-
-          <Box textAlign="justify" my={1}>
-            <Text>
               {'• '}<strong>{'Content Developer'}</strong>{' @ '}
-              <TextLink link="https://www.m" name="zyBooks" icon={<ExternalLinkIcon/>}></TextLink>
+              <TextLink link="https://www.zybooks.com/about-us/" name="zyBooks" icon={<ExternalLinkIcon/>}></TextLink>
             </Text>
           </Box>
       
