@@ -1,7 +1,9 @@
 import { Tag, TagLabel, VStack, HStack, Stack, Heading, Flex, Box, Text, Image, useMediaQuery, IconButton, Button, Spacer, colorMode, useColorMode, Center, useColorModeValue  } from '@chakra-ui/react';
+import { ArrowForwardIcon } from '@chakra-ui/icons';
 import { useState, useEffect } from 'react';
 import React from 'react'
 import NextLink from 'next/link'
+import ActionButton from './action-button';
 
 function ProjectCardItem({ title, desc, icon, tags, ...rest}) {
   const colors = useColorModeValue('black', 'white')
@@ -23,19 +25,19 @@ function ProjectCardItem({ title, desc, icon, tags, ...rest}) {
         // color={[bgColors]}
         // bgColor={[bgColors]}
         shadow="sm"
-        borderColor={[colors]}
-        borderWidth='1px'
+        // borderColor={[colors]}
+        borderWidth='2.5px'
+        borderRadius="sm"
         {...rest}
+        overflow="hidden"
       >
-        
-        {/* <Center> */}
         
         <HStack>
           <Image width="70px" height="65px" mx={1} src={icon} alt={title} ></Image>  
             <Box p={2}>
             <Heading fontSize='xl'>{title}</Heading>
             <Box my={2.5}>
-            <Stack spacing={2} isInline overflow={"scroll"} overflowWrap={false} >
+            <Stack spacing={2} isInline overflow={"hidden"} overflowWrap={false} >
               <Box>
               {tags.map(tag => (
                 <Tag mr={1.5} my={isMinWidth ? ".5" : "1"} size="md" key={tag}>
@@ -70,8 +72,9 @@ export default function FeaturedWorks() {
     <Flex>
       <Stack>
         <Box my={1}> 
-          <Heading fontSize="3xl" fontWeight="bold">Projects</Heading> 
+          <Heading fontSize="3xl" fontWeight="bold">Works</Heading> 
         </Box>
+        
         <Stack direction={isMinWidth ? "column" : "column"} spacing={5} align="center">
           <ProjectCardItem 
           title="Explorify" 
@@ -96,13 +99,16 @@ export default function FeaturedWorks() {
           ></ProjectCardItem>
         </Stack>
 
-        <Flex direction="row" alignSelf="flex-start">
-          <Box mt={3}>
-            <Button>
-              <Text fontWeight="bold" fontSize="md">View All</Text>
-            </Button>
-          </Box>
-        </Flex>
+      <Box>
+        <NextLink href={'https://www.google.com'} passHref>
+          <ActionButton mt={1.5}>
+            <Text fontWeight="bold" size="sm">
+              {'More projects →'}
+            </Text>
+          </ActionButton>
+        </NextLink>
+      </Box>
+    
         
     </Stack>
   </Flex>

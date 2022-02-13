@@ -1,9 +1,10 @@
-import { HStack, Center, Stack, Button, Box, Flex, IconButton, useMediaQuery, SimpleGrid } from '@chakra-ui/react'
+import { HStack, Heading, Text, Center, Stack, Button, Box, Flex, IconButton, useMediaQuery, SimpleGrid } from '@chakra-ui/react'
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 import { MdAlternateEmail, MdOutlinePictureAsPdf } from 'react-icons/md'
 import NextLink from 'next/link'
+
 
 export default function SocialMediaIcons() {
     const [desktopQuery] = useMediaQuery("(min-width: 700px)");
@@ -19,26 +20,27 @@ export default function SocialMediaIcons() {
       <Flex>
       <Flex direction="row" display={["none", "none", "flex", "flex"]}>
       <Stack direction={"row"} spacing={8} mt={4} p={2}>
+        
         <NextLink href="mailto: xinwng3@gmail.com" passHref>
-        <Button as="a" target="_blank" size="md" leftIcon={<MdAlternateEmail />} borderRadius="lg" borderWidth="2.5px" colorScheme='pink' variant='outline' fontWeight="normal" fontSize=".95rem">
-          e-mail
+        <Button as="a" target="_blank" size="md" leftIcon={<MdAlternateEmail />} borderRadius="sm" borderWidth="2.5px" colorScheme='pink' variant='outline' fontWeight="normal" fontSize=".95rem">
+          <Text>e-mail</Text>
         </Button>
         </NextLink>
         
         <NextLink href="https://www.linkedin.com/in/xinwng" passHref>
-          <Button as="a" target="_blank" size="md" leftIcon={<FaLinkedin /> } borderRadius="lg" borderWidth="2.5px" colorScheme='linkedin' variant='outline' fontWeight="normal" fontSize=".95rem">
+          <Button as="a" target="_blank" size="md" leftIcon={<FaLinkedin /> } borderRadius="sm" borderWidth="2.5px" colorScheme='linkedin' variant='outline' fontWeight="normal" fontSize=".95rem">
             linkedin
           </Button>
         </NextLink>
 
         <NextLink href="https://www.github.com/xinwng" passHref>
-          <Button as="a" target="_blank" size="md" leftIcon={<FaGithubSquare />} borderRadius="lg" borderWidth="2.5px" colorScheme='green' variant='outline' fontWeight="normal" fontSize=".95rem">
+          <Button as="a" target="_blank" size="md" leftIcon={<FaGithubSquare />} borderRadius="sm" borderWidth="2.5px" colorScheme='green' variant='outline' fontWeight="normal" fontSize=".95rem">
             github
           </Button>
         </NextLink>
         
         <NextLink href="/Xin_Wang_Resume.pdf" passHref>
-        <Button as="a" target="_blank" size="md" leftIcon={<MdOutlinePictureAsPdf />} borderRadius="lg" borderWidth="2.5px" colorScheme='facebook' variant='outline'fontWeight="normal" fontSize=".95rem">
+        <Button as="a" target="_blank" size="md" leftIcon={<MdOutlinePictureAsPdf />} borderRadius="sm" borderWidth="2.5px" colorScheme='facebook' variant='outline'fontWeight="normal" fontSize=".95rem">
           resume
         </Button>
         </NextLink>

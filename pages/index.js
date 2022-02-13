@@ -46,7 +46,7 @@ export default function Home() {
         <Box w="100%"><Profile /></Box>
         <Box w="100%" mt={isMinWidth ? "-4rem" : "0rem"} mb="3rem"><Bio /></Box>
         <Box w="100%" my="3rem"><FeaturedWorks/></Box>
-        <Box w="100%" my="3rem"><CurrentDoings/></Box>
+        <Box w="100%" my="3rem"><CurrentDoings /></Box>
         <Box w="100%" my="3rem"><PastDoings/></Box>
       </Container>
     </Center>

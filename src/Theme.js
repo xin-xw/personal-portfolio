@@ -22,7 +22,6 @@ const styles = {
       body: {
         bg: mode('#f9fafb', '#121212')(props),
         color: mode('black', 'white')(props),
-        fontSize: '15px',
       },
     }),
   }
