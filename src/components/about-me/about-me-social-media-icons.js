@@ -34,18 +34,19 @@ export default function SocialMediaIcons() {
             borderRadius="sm"
             borderWidth="2px"
             colorScheme="grey"
+            color={colorMode === "light" ? "red.500" : "red.200"}
             variant="outline"
             fontWeight="normal"
             // w="max-content"
             border="2px solid transparent"
-            color="trueGray.500"
+            // color="trueGray.500"
             transition="0.35s ease-out"
-            _hover={{
-              color: colorMode === "light" ? "red.500" : "red.200",
-              border: "2px solid",
-            }}
+            // _hover={{
+            //   color: colorMode === "light" ? "red.500" : "red.200",
+            //   border: "2px solid",
+            // }}
           >
-            Mail
+            <strong>Mail</strong>
           </Button>
         </NextLink>
 
@@ -62,14 +63,15 @@ export default function SocialMediaIcons() {
             fontWeight="normal"
             // w="max-content"
             border="2px solid transparent"
-            color="trueGray.500"
+            // color="trueGray.500"
+            color={colorMode === "light" ? "blue.600" : "blue.200"}
             transition="0.35s ease-out"
-            _hover={{
-              color: colorMode === "light" ? "blue.500" : "blue.200",
-              border: "2px solid",
-            }}
+            // _hover={{
+            //   color: colorMode === "light" ? "blue.500" : "blue.200",
+            //   border: "2px solid",
+            // }}
           >
-            LinkedIn
+            <strong>LinkedIn</strong>
           </Button>
         </NextLink>
 
@@ -86,14 +88,15 @@ export default function SocialMediaIcons() {
             fontWeight="normal"
             // w="min-content"
             border="2px solid transparent"
-            color="trueGray.500"
+            // color="trueGray.500"
+            color={colorMode === "light" ? "green.500" : "yellow.200"}
             transition="0.35s ease-out"
-            _hover={{
-              color: colorMode === "light" ? "yellow.500" : "yellow.200",
-              border: "2px solid",
-            }}
+            // _hover={{
+            //   color: colorMode === "light" ? "yellow.500" : "yellow.200",
+            //   border: "2px solid",
+            // }}
           >
-            GitHub
+            <strong>GitHub</strong>
           </Button>
         </NextLink>
 
@@ -113,14 +116,15 @@ export default function SocialMediaIcons() {
             fontWeight="normal"
             // w="min-content"
             border="2px solid transparent"
-            color="trueGray.500"
+            // color="trueGray.500"
+            color={colorMode === "light" ? "purple.500" : "purple.200"}
             // transition="0.35s ease-out"
-            _hover={{
-              color: colorMode === "light" ? "purple.500" : "purple.200",
-              border: "2px solid",
-            }}
+            // _hover={{
+            //   color: colorMode === "light" ? "purple.500" : "purple.200",
+            //   border: "2px solid",
+            // }}
           >
-            Resume
+            <strong>Resume</strong>
           </Button>
         </NextLink>
       </SimpleGrid>

@@ -8,8 +8,8 @@ import {
   HStack,
   keyframes,
   Spinner,
-  LinkBox,
-  LinkOverlay,
+  // LinkBox,
+  // LinkOverlay,
   useMediaQuery,
 } from "@chakra-ui/react";
 import useSWR from "swr";
@@ -35,7 +35,7 @@ export default function AboutMeSpotifyRecentSongs() {
   const animation = `${spin} infinite 20s linear`;
 
   return (
-    <LinkBox my={5} alignContent="center">
+    <Box my={5} alignContent="center">
       <HStack
         p={5}
         borderWidth="2px"
@@ -44,16 +44,16 @@ export default function AboutMeSpotifyRecentSongs() {
         mx="auto"
         my="auto"
         verticalAlign={"center"}
-        transition="all 0.2s"
-        transition-timing-function="spring(3 100 10 10)"
-        _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+        // transition="all 0.2s"
+        // transition-timing-function="spring(3 100 10 10)"
+        // _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
       >
-        <LinkOverlay
+        {/* <LinkOverlay
           href={
             "https://open.spotify.com/user/8grb62nlus2653d01p4bctwbd?si=0edb0e622a8d4a1d"
           }
           isExternal
-        ></LinkOverlay>
+        ></LinkOverlay> */}
         <Box p={0} overflow={"hidden"}>
           <Flex direction="row" alignContent={"space-around"}>
             <HStack spacing={2}>
@@ -97,6 +97,6 @@ export default function AboutMeSpotifyRecentSongs() {
           </Flex>
         </Box>
       </HStack>
-    </LinkBox>
+    </Box>
   );
 }
