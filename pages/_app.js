@@ -2,8 +2,8 @@ import Head from "next/head";
 import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../src/theme";
-import "@fontsource/inter";
 import ScrollToTop from "../src/components/scroll-to-top";
+
 function MyApp({ Component, pageProps }) {
   return (
     <ChakraProvider theme={theme}>

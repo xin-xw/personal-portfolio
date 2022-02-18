@@ -1,10 +1,7 @@
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 import { mode } from "@chakra-ui/theme-tools";
-
 import "@fontsource/ibm-plex-sans";
-import "@fontsource/roboto";
-import "@fontsource/inter";
 
 const breakpoints = createBreakpoints({
   sm: "700px",
