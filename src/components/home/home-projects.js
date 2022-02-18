@@ -48,10 +48,9 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
           <Box mb={3}>
             <HStack>
               <Image
-                height="46px"
-                width="46px"
+                height="40px"
+                width="40px"
                 layout="fixed"
-                mr={1}
                 src={icon}
                 alt={title}
               ></Image>
@@ -82,7 +81,7 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
                     {tags.map((tag) => (
                       <Tag
                         borderWidth="1.5px"
-                        mr={1.5}
+                        mx={1}
                         my={1}
                         key={tag}
                         borderRadius="sm"
