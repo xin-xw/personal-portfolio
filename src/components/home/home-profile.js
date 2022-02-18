@@ -7,7 +7,6 @@ import {
   Image,
   useMediaQuery,
   Spacer,
-  colorMode,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import React from "react";

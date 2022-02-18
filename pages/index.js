@@ -5,7 +5,7 @@ import Bio from "../src/components/home/home-bio";
 import HomeProjects from "../src/components/home/home-projects";
 import CurrentDoings from "../src/components/home/doings/current-doings";
 import PastDoings from "../src/components/home/doings/past-doings";
-import { Container } from "../src/components/Container";
+import { Container } from "../src/components/container";
 import { useState, useEffect } from "react";
 
 export default function Home() {

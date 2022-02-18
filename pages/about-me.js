@@ -1,6 +1,6 @@
 import { Box, useMediaQuery } from "@chakra-ui/react";
 import NavBar from "../src/components/navbar";
-import { Container } from "../src/components/Container";
+import { Container } from "../src/components/container";
 import { useState, useEffect } from "react";
 import AboutMeHeader from "../src/components/about-me/about-me-header.js";
 import AboutMeNow from "../src/components/about-me/about-me-now";
