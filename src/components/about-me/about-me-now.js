@@ -1,7 +1,8 @@
-import { Heading, Flex, Box, useMediaQuery } from "@chakra-ui/react";
+import { Heading, Flex, Box, useMediaQuery, Text } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import React from "react";
-import AboutMeSpotifyFetcher from "./about-me-spotify.js";
+import AboutMeSpotifyRecentSongs from "./about-me-spotify-recent-songs.js";
+import AboutMeSpotifyTopTracks from "./about-me-spotify-top-tracks-mapping.js";
 
 export default function Bio() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
@@ -15,13 +16,30 @@ export default function Bio() {
 
   return (
     <Flex direction="column">
-      <Box my={1}>
+      <Box my={4}>
         <Heading fontSize="3xl" fontWeight="bold">
-          At this moment
+          {"Music"}
         </Heading>
       </Box>
 
-      <AboutMeSpotifyFetcher />
+      <Box mt={0}>
+        <Text fontSize="1.3rem" fontWeight="bold">
+          {"Right now, I'm listening to..."}
+        </Text>
+      </Box>
+
+      <Box>
+        <AboutMeSpotifyRecentSongs />
+      </Box>
+
+      <Box mt={8}>
+        <Text fontSize="1.3rem" fontWeight="bold">
+          {"My top tracks for this month"}
+        </Text>
+        <Box>
+          <AboutMeSpotifyTopTracks />
+        </Box>
+      </Box>
     </Flex>
   );
 }

@@ -1,5 +1,6 @@
 import querystring from "querystring";
-
+//
+// accounts.spotify.com/authorize?client_id=MY_CLIENT_ID&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=user-top-read%20user-read-recently-played
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
@@ -10,6 +11,7 @@ const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
 const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
 const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
 const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
+const TOP_TRACKS = `https://api.spotify.com/v1/me/top/tracks`;
 
 const getAccessToken = async () => {
   const response = await fetch(TOKEN_ENDPOINT, {
@@ -94,14 +96,27 @@ export const getRecentTracks = async () => {
 //   });
 // };
 
+export const getTopTracks = async () => {
+  const { access_token } = await getAccessToken();
+  return fetch(TOP_TRACKS, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
 export default async (_, res) => {
   const response = await getRecentTracks();
+  const top_track_response = await getTopTracks();
 
-  if (response.status === 204 || response.status > 400) {
-    return res.status(200).json({ isPlaying: false });
-  }
+  // if (response.status === 204 || response.status > 400) {
+  //   return res.status(200).json({ isPlaying: false });
+  // }
 
   const songs = await response.json();
+  const top_tracks = await top_track_response.json();
+  if (top_tracks.items === null) {
+    return res.status(200).json({ topTracks: false });
+  }
 
   if (songs.item === null) {
     return res.status(200).json({ isPlaying: false });
@@ -121,8 +136,13 @@ export default async (_, res) => {
     "Cache-Control",
     "public, s-maxage=60, stale-while-revalidate=30"
   );
-  console.log(songs, albumImageUrl, album);
-  return res
-    .status(200)
-    .json({ isPlaying, title, artist, songUrl, album, albumImageUrl });
+
+  return res.status(200).json({
+    isPlaying,
+    title,
+    artist,
+    songUrl,
+    album,
+    albumImageUrl,
+  });
 };

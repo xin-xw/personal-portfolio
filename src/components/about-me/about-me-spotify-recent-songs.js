@@ -16,7 +16,7 @@ const spin = keyframes`
   to { transform: rotate(360deg); }
 `;
 
-export default function AboutMeSpotifyFetcher() {
+export default function AboutMeSpotifyRecentSongs() {
   const fetcher = (url) => fetch(url).then((r) => r.json());
   const { data } = useSWR("/api/spotify", fetcher);
   const animation = `${spin} infinite 20s linear`;

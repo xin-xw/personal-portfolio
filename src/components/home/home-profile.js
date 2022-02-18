@@ -46,7 +46,7 @@ export default function HomeProfile() {
             {"Xin Wang"}
           </Heading>
           <Text my={1.5}>{"Incoming Software Engineer @ VMware"}</Text>
-          <Text my={1.5} color={colorMode === "dark" ? "gray.200" : "gray.500"}>
+          <Text my={1.5} color={colorMode === "dark" ? "gray.300" : "gray.700"}>
             📍 Los Angeles Metropolitan Area
           </Text>
         </Box>

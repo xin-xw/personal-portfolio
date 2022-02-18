@@ -26,8 +26,9 @@ export default function AboutMeHeader() {
     <Stack>
       <Flex direction={isMinWidth ? "row" : "column"} mt={isMinWidth ? 15 : 0}>
         <Image
-          src="/me-header-xin-mobile.svg"
-          alt="Cartoon Picture Hands Crossed"
+          // src="/me-header-xin-mobile.svg"
+          src="/me-header-xin-right.svg"
+          alt="Cartoon Picture Happy"
           borderRadius="full"
           backgroundColor="transparent"
           boxShadow="none"
@@ -39,8 +40,9 @@ export default function AboutMeHeader() {
 
         <Image
           // src="/me-header-xin-desktop.svg"
-          src="/me-header-xin-mobile.svg"
-          alt="Cartoon Picture Standing"
+          // src="/me-header-xin-mobile.svg"
+          src="/me-header-xin-right.svg"
+          alt="Cartoon Picture Happy"
           backgroundColor="transparent"
           boxShadow="none"
           height="280px"

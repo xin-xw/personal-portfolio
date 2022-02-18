@@ -127,6 +127,23 @@ const NavBar = () => {
             </NextLink> */}
 
             {/* <NextLink href="/Xin_Wang_Resume.pdf" passHref> */}
+            <NextLink href="/about-me" passHref>
+              <Button
+                variant={router.pathname === "/about-me" ? "solid" : "ghost"}
+                // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
+                fontWeight={router.pathname === "/about-me" ? "bold" : "normal"}
+                // fontWeight="bold"
+                fontSize="15px"
+                to="/about-me"
+              >
+                {router.pathname === "/about-me" ? (
+                  <u>About Me</u>
+                ) : (
+                  <Text>About Me</Text>
+                )}
+              </Button>
+            </NextLink>
+
             <NextLink
               href={
                 "https://docs.google.com/document/d/1Bn9X08IqlF0gKhTlndLoVqKNHnDfQH9ue9peZ7Qvalk/edit?usp=sharing"
@@ -148,23 +165,6 @@ const NavBar = () => {
                 to="https://docs.google.com/document/d/1Bn9X08IqlF0gKhTlndLoVqKNHnDfQH9ue9peZ7Qvalk/edit?usp=sharing"
               >
                 Resume
-              </Button>
-            </NextLink>
-
-            <NextLink href="/about-me" passHref>
-              <Button
-                variant={router.pathname === "/about-me" ? "solid" : "ghost"}
-                // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
-                fontWeight={router.pathname === "/about-me" ? "bold" : "normal"}
-                // fontWeight="bold"
-                fontSize="15px"
-                to="/about-me"
-              >
-                {router.pathname === "/about-me" ? (
-                  <u>About Me</u>
-                ) : (
-                  <Text>About Me</Text>
-                )}
               </Button>
             </NextLink>
 
