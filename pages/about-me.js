@@ -1,9 +1,9 @@
 import { Box, useMediaQuery } from "@chakra-ui/react";
-import NavBar from "../src/components/navbar";
-import { Container } from "../src/components/Container";
+import NavBar from "../src/Components/navbar";
+import { Container } from "../src/Components/Container";
 import { useState, useEffect } from "react";
-import AboutMeHeader from "../src/components/about-me/about-me-header.js";
-import AboutMeNow from "../src/components/about-me/about-me-now";
+import AboutMeHeader from "../src/Components/about-me/about-me-header.js";
+import AboutMeNow from "../src/Components/about-me/about-me-now";
 
 export default function Home() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");

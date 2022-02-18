@@ -1,11 +1,11 @@
 import { Box, useMediaQuery } from "@chakra-ui/react";
-import Profile from "../src/components/home/home-profile";
-import Header from "../src/components/navbar";
-import Bio from "../src/components/home/home-bio";
-import HomeProjects from "../src/components/home/home-projects";
-import CurrentDoings from "../src/components/home/doings/current-doings";
-import PastDoings from "../src/components/home/doings/past-doings";
-import { Container } from "../src/components/Container";
+import Profile from "../src/Components/home/home-profile";
+import Header from "../src/Components/navbar";
+import Bio from "../src/Components/home/home-bio";
+import HomeProjects from "../src/Components/home/home-projects";
+import CurrentDoings from "../src/Components/home/doings/current-doings";
+import PastDoings from "../src/Components/home/doings/past-doings";
+import { Container } from "../src/Components/Container";
 import { useState, useEffect } from "react";
 
 export default function Home() {
