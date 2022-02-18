@@ -7,6 +7,7 @@ import {
   Icon,
   HStack,
   keyframes,
+  Spinner,
 } from "@chakra-ui/react";
 import useSWR from "swr";
 import { GiMusicalNotes } from "react-icons/gi";
@@ -41,14 +42,19 @@ export default function AboutMeSpotifyRecentSongs() {
                 alt="Now playing icon"
               />
               <Spacer />
-              <Image
-                animation={animation}
-                mr={3}
-                boxSize="55px"
-                borderRadius="full"
-                src={data?.albumImageUrl}
-                alt={data?.album}
-              />
+              {data?.isPlaying ? (
+                <Spinner></Spinner>
+              ) : (
+                <Image
+                  animation={animation}
+                  mr={3}
+                  boxSize="55px"
+                  borderRadius="full"
+                  src={data?.albumImageUrl}
+                  alt={data?.album}
+                />
+              )}
+
               <Box>
                 <Flex direction="column">
                   <Text fontWeight="bold" fontSize="lg">

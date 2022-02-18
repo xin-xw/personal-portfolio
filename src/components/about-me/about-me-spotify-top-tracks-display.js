@@ -1,9 +1,4 @@
 import {
-  Table,
-  Thead,
-  Tbody,
-  Tfoot,
-  Tr,
   Flex,
   HStack,
   Box,
