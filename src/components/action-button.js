@@ -16,13 +16,13 @@ const ActionButton = React.forwardRef((props, ref) => {
       pr={3}
       py={3}
       w="min-content"
-      border="1px solid transparent"
+      border="2px solid transparent"
       color="trueGray.500"
       fontWeight="regular"
       transition="0.35s ease-out"
       _hover={{
         color: colorMode === "light" ? "trueGray.900" : "trueGray.100",
-        border: "1px solid",
+        border: "2px solid",
         pr: 3,
         pl: 3,
       }}
