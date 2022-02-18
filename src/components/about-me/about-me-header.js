@@ -6,6 +6,7 @@ import {
   Image,
   useMediaQuery,
   Spacer,
+  useColorMode,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import React from "react";
@@ -13,6 +14,7 @@ import SocialMediaIcons from "./about-me-social-media-icons";
 // import TypeWriter from "../typewriter";
 
 export default function AboutMeHeader() {
+  const { colorMode } = useColorMode();
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
 
@@ -26,8 +28,11 @@ export default function AboutMeHeader() {
     <Stack>
       <Flex direction={isMinWidth ? "row" : "column"} mt={isMinWidth ? 15 : 0}>
         <Image
-          // src="/me-header-xin-mobile.svg"
-          src="/me-header-xin-right.svg"
+          src={
+            colorMode === "dark"
+              ? "/media/about-me/pfp-night-mode.svg"
+              : "/media/about-me/pfp-facing-right.svg"
+          }
           alt="Cartoon Picture Happy"
           borderRadius="full"
           backgroundColor="transparent"
@@ -39,9 +44,11 @@ export default function AboutMeHeader() {
         />
 
         <Image
-          // src="/me-header-xin-desktop.svg"
-          // src="/me-header-xin-mobile.svg"
-          src="/me-header-xin-right.svg"
+          src={
+            colorMode === "dark"
+              ? "/media/about-me/pfp-night-mode.svg"
+              : "/media/about-me/pfp-facing-right.svg"
+          }
           alt="Cartoon Picture Happy"
           backgroundColor="transparent"
           boxShadow="none"

@@ -4,7 +4,7 @@ import React from "react";
 import AboutMeSpotifyRecentSongs from "./about-me-spotify-recent-songs.js";
 import AboutMeSpotifyTopTracks from "./about-me-spotify-top-tracks-mapping.js";
 
-export default function Bio() {
+export default function AboutMeMusic() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
 
@@ -32,7 +32,7 @@ export default function Bio() {
         <AboutMeSpotifyRecentSongs />
       </Box>
 
-      <Box mt={8}>
+      <Box>
         <Text fontSize="1.3rem" fontWeight="bold">
           {"My top tracks for this month"}
         </Text>

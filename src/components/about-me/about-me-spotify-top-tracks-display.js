@@ -6,14 +6,22 @@ import {
   Spacer,
   Divider,
   useColorMode,
+  LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react";
 
-function TrackTemplate({ ranking, song_name, artist_name }) {
+function TrackTemplate({ ranking, song_name, artist_name, spotify_url }) {
   const { colorMode } = useColorMode();
   return (
-    <Box>
+    <LinkBox>
       <Flex direction={"row"}>
-        <HStack>
+        <HStack
+          overflow={"hidden"}
+          verticalAlign={"center"}
+          transition="all 0.2s"
+          transition-timing-function="spring(3 100 10 10)"
+          _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+        >
           <Flex>
             <HStack>
               <Box>
@@ -21,6 +29,7 @@ function TrackTemplate({ ranking, song_name, artist_name }) {
               </Box>
               <Spacer />
               <Flex direction="column">
+                <LinkOverlay href={spotify_url} isExternal></LinkOverlay>
                 <Box>
                   <Text fontSize="md" fontWeight={"bold"}>
                     {song_name}
@@ -39,18 +48,19 @@ function TrackTemplate({ ranking, song_name, artist_name }) {
           </Flex>
         </HStack>
       </Flex>
-    </Box>
+    </LinkBox>
   );
 }
 
 export default function AboutMeSpotifyTopTracks(track) {
   return (
-    <Flex direction={"column"} mt={1}>
+    <Flex direction={"column"}>
       <Box my={3}>
         <TrackTemplate
           ranking={track.ranking}
           song_name={track.title}
           artist_name={track.artist}
+          spotify_url={track.song_url}
         ></TrackTemplate>
       </Box>
       <Divider />

@@ -1,6 +1,5 @@
 import querystring from "querystring";
-//
-// accounts.spotify.com/authorize?client_id=MY_CLIENT_ID&response_type=code&redirect_uri=https%3A%2F%2Flocalhost%3A3000%2Fcallback&scope=user-top-read%20user-read-recently-played
+
 const {
   SPOTIFY_CLIENT_ID: client_id,
   SPOTIFY_CLIENT_SECRET: client_secret,
@@ -8,13 +7,13 @@ const {
 } = process.env;
 
 const basic = Buffer.from(`${client_id}:${client_secret}`).toString("base64");
-const NOW_PLAYING_ENDPOINT = `https://api.spotify.com/v1/me/player/currently-playing`;
-const TOKEN_ENDPOINT = `https://accounts.spotify.com/api/token`;
-const RECENTLY_PLAYED_ENDPOINT = `https://api.spotify.com/v1/me/player/recently-played`;
-const TOP_TRACKS = `https://api.spotify.com/v1/me/top/tracks`;
+const token_endpoint = `https://accounts.spotify.com/api/token`;
+const now_playing_endpoint = `https://api.spotify.com/v1/me/player/currently-playing`;
+const recently_played_endpoint = `https://api.spotify.com/v1/me/player/recently-played`;
+const get_top_tracks_endpoint = `https://api.spotify.com/v1/me/top/tracks`;
 
 const getAccessToken = async () => {
-  const response = await fetch(TOKEN_ENDPOINT, {
+  const response = await fetch(token_endpoint, {
     method: "POST",
     headers: {
       Authorization: `Basic ${basic}`,
@@ -32,7 +31,7 @@ const getAccessToken = async () => {
 export const getNowPlaying = async () => {
   const { access_token } = await getAccessToken();
 
-  return fetch(NOW_PLAYING_ENDPOINT, {
+  return fetch(now_playing_endpoint, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -42,7 +41,16 @@ export const getNowPlaying = async () => {
 export const getRecentTracks = async () => {
   const { access_token } = await getAccessToken();
 
-  return fetch(RECENTLY_PLAYED_ENDPOINT, {
+  return fetch(recently_played_endpoint, {
+    headers: {
+      Authorization: `Bearer ${access_token}`,
+    },
+  });
+};
+
+export const getTopTracks = async () => {
+  const { access_token } = await getAccessToken();
+  return fetch(get_top_tracks_endpoint, {
     headers: {
       Authorization: `Bearer ${access_token}`,
     },
@@ -95,54 +103,3 @@ export const getRecentTracks = async () => {
 //     rp_song_url,
 //   });
 // };
-
-export const getTopTracks = async () => {
-  const { access_token } = await getAccessToken();
-  return fetch(TOP_TRACKS, {
-    headers: {
-      Authorization: `Bearer ${access_token}`,
-    },
-  });
-};
-export default async (_, res) => {
-  const response = await getRecentTracks();
-  const top_track_response = await getTopTracks();
-
-  // if (response.status === 204 || response.status > 400) {
-  //   return res.status(200).json({ isPlaying: false });
-  // }
-
-  const songs = await response.json();
-  const top_tracks = await top_track_response.json();
-  if (top_tracks.items === null) {
-    return res.status(200).json({ topTracks: false });
-  }
-
-  if (songs.item === null) {
-    return res.status(200).json({ isPlaying: false });
-  }
-
-  const mostRecentSong = songs.items[0];
-  const isPlaying = mostRecentSong.is_playing;
-  const title = mostRecentSong.track.name;
-  const artist = mostRecentSong.track.artists
-    .map((_artist) => _artist.name)
-    .shift();
-  const songUrl = mostRecentSong.track.external_urls.spotify;
-  const album = mostRecentSong.track.album.name;
-  const albumImageUrl = mostRecentSong.track.album.images[0].url;
-
-  res.setHeader(
-    "Cache-Control",
-    "public, s-maxage=60, stale-while-revalidate=30"
-  );
-
-  return res.status(200).json({
-    isPlaying,
-    title,
-    artist,
-    songUrl,
-    album,
-    albumImageUrl,
-  });
-};

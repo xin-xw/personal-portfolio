@@ -31,7 +31,7 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
   }, [isMinWidth, desktopQuery]);
 
   return (
-    <LinkBox as="article" {...rest}>
+    <LinkBox as="article" {...rest} mt={2}>
       <HStack
         p={5}
         borderWidth="2px"
@@ -48,9 +48,10 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
           <Box mb={3}>
             <HStack>
               <Image
-                height="40px"
-                width="40px"
+                height="46px"
+                width="46px"
                 layout="fixed"
+                mr={1}
                 src={icon}
                 alt={title}
               ></Image>
@@ -58,17 +59,17 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
                 {title}
               </Text>
               <Spacer />
-              {/* <LinkOverlay href={gh_link} passHref> */}
               <NextLink href={gh_link} passHref>
                 <IconButton
                   as="a"
-                  aria-label="Learn more on GitHub"
+                  aria-label="Redirect to project's GitHub"
                   borderRadius={"sm"}
+                  fontSize="2xl"
+                  shadow="sm"
                   icon={<FiGithub />}
                   variant={"outline"}
                 ></IconButton>
               </NextLink>
-              {/* </LinkOverlay> */}
             </HStack>
           </Box>
 
@@ -87,7 +88,7 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
                         borderRadius="sm"
                         variant="subtle"
                       >
-                        <TagLabel fontSize="xs">{tag}</TagLabel>
+                        <TagLabel fontSize="sm">{tag}</TagLabel>
                       </Tag>
                     ))}
                   </Box>
@@ -244,9 +245,9 @@ export default function HomeProjects() {
           <ProjectCardItem
             title="Spotability"
             desc={
-              "Ideated with 3 other colleagues couples dating platform through similarities of mutual music taste; the application received 2 awards: Best Valentine's Day Hack and Best Design (UI) in competition against 160+ other participants at Binghamton University’s HackBU 2022. "
+              "Ideated with 3 other colleagues a dating platform based on similarities detected through each other's music taste. Our application received 2 awards: Best Valentine's Day Hack and Best Design (UI) in competition against 160+ other participants at Binghamton University’s HackBU 2022. "
             }
-            icon="/home-projects-spotability.png"
+            icon="/media/home/projects-spotability-icon.png"
             tags={[
               "React.js",
               "Django",
@@ -261,7 +262,7 @@ export default function HomeProjects() {
           <ProjectCardItem
             title="Explorify"
             desc="Explorify aims to unleash the potential of Spotify's Recommendation API. Provided your favorite songs along with specific track attributes such as: tempo, valence, energy, popularity, and more - the application aims to recommend you other similar tracks."
-            icon="/home-projects-explorify.png"
+            icon="/media/home/projects-explorify-icon.png"
             tags={[
               "Express.js",
               "React.js",
@@ -276,12 +277,13 @@ export default function HomeProjects() {
           <ProjectCardItem
             title="$plice"
             desc="Splice was ideated through the idea to easily split the check when dining out with friends or family. Users can select the restaurant they choose and the menu for the respective restaurant will display. Each user will select the food they ordered and pass it along to the next person, and the total for each user will output."
-            icon="/home-projects-splice.png"
+            icon="/media/home/projects-splice-icon.png"
             tags={[
               "C++",
               "Google Test Framework",
               "CI/CD",
-              "Prototype & Composite Design Pattern",
+              "Prototype",
+              "Composite",
             ]}
             gh_link={"https://github.com/xinwng/splice"}
           ></ProjectCardItem>

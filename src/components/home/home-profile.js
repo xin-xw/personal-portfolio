@@ -26,11 +26,8 @@ export default function HomeProfile() {
   return (
     <Stack>
       <Flex direction={isMinWidth ? "row" : "column"} mt={isMinWidth ? 15 : 0}>
-        {/* Mobile Display */}
-
         <Image
-          // src="/AvatarImg.jpg"
-          src="/home-xin-profile-mobile.svg"
+          src="/media/home/pfp-mobile.svg"
           alt="Profile Picture"
           borderRadius="full"
           backgroundColor="transparent"
@@ -51,13 +48,10 @@ export default function HomeProfile() {
           </Text>
         </Box>
 
-        {/* Desktop Display */}
         <Spacer />
         <Image
-          // src="/AvatarImg.jpg"
-          src="/home-xin-profile-desktop.svg"
+          src="/media/home/pfp-desktop.svg"
           alt="Profile Picture"
-          // borderRadius='full'
           backgroundColor="transparent"
           boxShadow="none"
           height="385px"

@@ -55,7 +55,7 @@ const NavBar = () => {
     <Flex position="static">
       <Flex
         as="nav"
-        pos="relative"
+        pos="sticky"
         my={10}
         mx={-9}
         align="flex-start"
