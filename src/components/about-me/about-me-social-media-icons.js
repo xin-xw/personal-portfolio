@@ -1,22 +1,13 @@
 import {
-  HStack,
-  Heading,
-  Text,
-  Center,
-  Stack,
   Button,
-  Box,
   Flex,
-  IconButton,
-  VStack,
   useMediaQuery,
   useColorMode,
   SimpleGrid,
 } from "@chakra-ui/react";
 import React from "react";
 import { useState, useEffect } from "react";
-import { FaLinkedin, FaGithubAlt, FaLink, FaLinkedinIn } from "react-icons/fa";
-
+import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 import { MdAlternateEmail, MdOutlinePictureAsPdf } from "react-icons/md";
 import NextLink from "next/link";
 

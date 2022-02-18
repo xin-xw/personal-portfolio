@@ -10,12 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import React from "react";
-import NextLink from "next/link";
-import {
-  ExternalLinkIcon,
-  SmallAddIcon,
-  PlusSquareIcon,
-} from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import TextLink from "./text-link";
 
 export default function PastDoings() {

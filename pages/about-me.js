@@ -1,4 +1,4 @@
-import { VStack, Center, Box, Spacer, useMediaQuery } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import NavBar from "../src/components/navbar";
 import { Container } from "../src/components/Container";
 import { useState, useEffect } from "react";

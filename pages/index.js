@@ -1,4 +1,4 @@
-import { VStack, Center, Box, Spacer, useMediaQuery } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 import Profile from "../src/components/home/home-profile";
 import Header from "../src/components/navbar";
 import Bio from "../src/components/home/home-bio";
@@ -7,7 +7,6 @@ import CurrentDoings from "../src/components/home/doings/current-doings";
 import PastDoings from "../src/components/home/doings/past-doings";
 import { Container } from "../src/components/Container";
 import { useState, useEffect } from "react";
-import NextLink from "next/link";
 
 export default function Home() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
@@ -18,19 +17,6 @@ export default function Home() {
       setIsMinWidth(desktopQuery);
     }
   }, [isMinWidth, desktopQuery]);
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <Container>

@@ -3,17 +3,11 @@ import {
   Heading,
   Flex,
   Box,
-  Text,
   Image,
   useMediaQuery,
   Spacer,
-  colorMode,
-  Center,
-  VStack,
-  HStack,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import NextLink from "next/link";
 import React from "react";
 // import TypeWriter from "../typewriter";
 

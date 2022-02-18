@@ -6,24 +6,18 @@ import {
   Stack,
   Heading,
   Flex,
-  Button,
   Box,
-  Center,
   Text,
-  Img,
   Image,
   useMediaQuery,
   IconButton,
   Spacer,
-  useColorModeValue,
   LinkBox,
-  LinkOverlay,
 } from "@chakra-ui/react";
 
 import { useState, useEffect } from "react";
 import React from "react";
 import NextLink from "next/link";
-import ActionButton from "../action-button";
 import { FiGithub } from "react-icons/fi";
 
 function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {

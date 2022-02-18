@@ -1,17 +1,10 @@
 import {
-  Stack,
-  Heading,
   Flex,
   Box,
   Text,
   Image,
-  useMediaQuery,
   Spacer,
-  colorMode,
-  Center,
-  IconButton,
   Icon,
-  VStack,
   HStack,
   keyframes,
 } from "@chakra-ui/react";

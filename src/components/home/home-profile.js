@@ -8,14 +8,11 @@ import {
   useMediaQuery,
   Spacer,
   colorMode,
-  Center,
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
-import NextLink from "next/link";
 import React from "react";
 
 export default function HomeProfile() {
-  const isDark = colorMode == "dark";
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
 

@@ -6,7 +6,6 @@ import {
   IconButton,
   Button,
   useColorMode,
-  useColorModeValue,
   useMediaQuery,
   Spacer,
 } from "@chakra-ui/react";
@@ -38,7 +37,7 @@ import NextLink from "next/link";
 //   );
 // };
 
-const NavBar = (props) => {
+const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);

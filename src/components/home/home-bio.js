@@ -11,13 +11,12 @@ import {
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import React from "react";
-import SocialMediaIcons from "../about-me/about-me-social-media-icons.js";
-import { ArrowForwardIcon, ExternalLinkIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 import NextLink from "next/link";
 import ActionButton from "../action-button";
 
-function TextLink2({ link, name, icon, ...rest }) {
-  const { colorMode, toggleColorMode } = useColorMode("black", "white");
+function TextLink2({ link, name }) {
+  const { colorMode } = useColorMode("black", "white");
   return (
     <NextLink href={link} passHref>
       <IconButton
