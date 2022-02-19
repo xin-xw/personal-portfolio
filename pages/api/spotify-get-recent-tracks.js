@@ -28,11 +28,11 @@ export default async (_, res) => {
   );
 
   return res.status(200).json({
-    isPlaying: is_playing,
+    is_playing,
     title,
     artist,
-    songUrl: song_url,
+    song_url,
     album,
-    albumImageUrl: album_img_url,
+    album_img_url,
   });
 };

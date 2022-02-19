@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import theme from "../src/theme";
 import ScrollToTop from "../src/components/scroll-to-top";
+import { Box } from "@chakra-ui/react";
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -15,6 +16,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <Component {...pageProps} />
+      <Box mb={50}></Box>
     </ChakraProvider>
   );
 }

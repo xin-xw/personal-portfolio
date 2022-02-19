@@ -275,7 +275,7 @@ export default function HomeProjects() {
 
           <ProjectCardItem
             title="$plice"
-            desc="Splice was ideated through the idea to easily split the check when dining out with friends or family. Users can select the restaurant they choose and the menu for the respective restaurant will display. Each user will select the food they ordered and pass it along to the next person, and the total for each user will output."
+            desc="Splice was envisioned through yearning for a way that can easily split the bill when dining out with friends or family. Users can select the restaurant they are dining at and the menu for the respective restaurant will display. Each user will select the food they ordered and pass on the device to the next person. At the end, individualized bills will be generated for each user."
             icon="/media/home/projects-splice-icon.png"
             tags={[
               "C++",

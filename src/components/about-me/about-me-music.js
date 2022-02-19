@@ -36,7 +36,7 @@ export default function AboutMeMusic() {
             }
             passHref
           >
-            <ActionButton as="a" target="_blank" mt={-5} mb={5}>
+            <ActionButton as="a" target="_blank" mt={-2} mb={5}>
               <Text fontWeight="bold" size="md">
                 {"Check out my Spotify profile →"}
               </Text>
@@ -45,7 +45,7 @@ export default function AboutMeMusic() {
         </Box>
       </Box>
 
-      <Box>
+      <Box mt={3}>
         <Text fontSize="1.3rem" fontWeight="bold">
           {"My top tracks for this month"}
         </Text>

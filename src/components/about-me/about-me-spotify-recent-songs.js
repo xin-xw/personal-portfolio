@@ -8,9 +8,9 @@ import {
   HStack,
   keyframes,
   Spinner,
-  // LinkBox,
-  // LinkOverlay,
   useMediaQuery,
+  LinkBox,
+  LinkOverlay,
 } from "@chakra-ui/react";
 import useSWR from "swr";
 import { useState, useEffect } from "react";
@@ -35,7 +35,7 @@ export default function AboutMeSpotifyRecentSongs() {
   const animation = `${spin} infinite 20s linear`;
 
   return (
-    <Box my={5} alignContent="center">
+    <LinkBox my={5} alignContent="center">
       <HStack
         p={5}
         borderWidth="2px"
@@ -44,9 +44,9 @@ export default function AboutMeSpotifyRecentSongs() {
         mx="auto"
         my="auto"
         verticalAlign={"center"}
-        // transition="all 0.2s"
-        // transition-timing-function="spring(3 100 10 10)"
-        // _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+        transition="all 0.2s"
+        transition-timing-function="spring(3 100 10 10)"
+        _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
       >
         {/* <LinkOverlay
           href={
@@ -76,27 +76,29 @@ export default function AboutMeSpotifyRecentSongs() {
                     width={isMinWidth ? "49px" : "23px"}
                     height={isMinWidth ? "49px" : "23px"}
                     borderRadius="full"
-                    src={data?.albumImageUrl}
+                    src={data?.album_img_url}
                     alt={data?.album}
+                    display={isMinWidth === true ? "block" : "none"}
                   />
                 </Box>
               )}
+              <LinkOverlay href={data?.song_url} isExternal>
+                <Box textOverflow={"hidden"}>
+                  <Flex direction="column">
+                    <Text fontWeight="bold" fontSize={isMinWidth ? "md" : "md"}>
+                      {data?.title}
+                    </Text>
 
-              <Box textOverflow={"hidden"}>
-                <Flex direction="column">
-                  <Text fontWeight="bold" fontSize={isMinWidth ? "md" : "sm"}>
-                    {data?.title}
-                  </Text>
-
-                  <Text fontSize={isMinWidth ? "sm" : "xs"}>
-                    by {data?.artist}
-                  </Text>
-                </Flex>
-              </Box>
+                    <Text fontSize={isMinWidth ? "sm" : "sm"}>
+                      by {data?.artist}
+                    </Text>
+                  </Flex>
+                </Box>
+              </LinkOverlay>
             </HStack>
           </Flex>
         </Box>
       </HStack>
-    </Box>
+    </LinkBox>
   );
 }
