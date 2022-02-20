@@ -8,10 +8,6 @@ export default class DocumentB extends Document {
       <Html lang="en">
         <Head>
           <link rel="website icon" href="/media/favicon.ico" />
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/@xz/fonts@1/serve/hk-grotesk.min.css"
-          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link

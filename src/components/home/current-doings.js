@@ -50,7 +50,7 @@ export default function CurrentDoings() {
           </Box>
         </ListItem>
 
-        <Divider my={1.5} />
+        {/* <Divider my={1.5} /> */}
         {/* <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
