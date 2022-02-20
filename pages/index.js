@@ -3,8 +3,8 @@ import Profile from "../src/components/home/home-profile";
 import Header from "../src/components/navbar";
 import Bio from "../src/components/home/home-bio";
 import HomeProjects from "../src/components/home/home-projects";
-import CurrentDoings from "../src/components/home/doings/current-doings";
-import PastDoings from "../src/components/home/doings/past-doings";
+import CurrentDoings from "../src/components/home/current-doings";
+import PastDoings from "../src/components/home/past-doings";
 import { Container } from "../src/components/container";
 import { useState, useEffect } from "react";
 

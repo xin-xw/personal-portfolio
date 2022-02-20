@@ -13,6 +13,7 @@ import {
   IconButton,
   Spacer,
   LinkBox,
+  useColorMode,
 } from "@chakra-ui/react";
 
 import { useState, useEffect } from "react";
@@ -21,6 +22,7 @@ import NextLink from "next/link";
 import { FiGithub } from "react-icons/fi";
 
 function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
+  const { colorMode } = useColorMode();
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
 
@@ -31,7 +33,12 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
   }, [isMinWidth, desktopQuery]);
 
   return (
-    <LinkBox as="article" {...rest} mt={2}>
+    <LinkBox
+      as="article"
+      {...rest}
+      mt={2}
+      bgColor={colorMode === "dark" ? "#000" : "#fff"}
+    >
       <HStack
         p={5}
         borderWidth="2px"

@@ -11,6 +11,7 @@ import {
   useMediaQuery,
   LinkBox,
   LinkOverlay,
+  useColorMode,
 } from "@chakra-ui/react";
 import useSWR from "swr";
 import { useState, useEffect } from "react";
@@ -22,6 +23,7 @@ const spin = keyframes`
 `;
 
 export default function AboutMeSpotifyRecentSongs() {
+  const { colorMode } = useColorMode();
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
 
@@ -35,7 +37,11 @@ export default function AboutMeSpotifyRecentSongs() {
   const animation = `${spin} infinite 20s linear`;
 
   return (
-    <LinkBox my={5} alignContent="center">
+    <LinkBox
+      my={5}
+      alignContent="center"
+      bgColor={colorMode === "dark" ? "#000" : "#fff"}
+    >
       <HStack
         p={5}
         borderWidth="2px"

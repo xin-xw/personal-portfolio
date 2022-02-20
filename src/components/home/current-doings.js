@@ -51,7 +51,7 @@ export default function CurrentDoings() {
         </ListItem>
 
         <Divider my={1.5} />
-        <ListItem>
+        {/* <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
               <strong>{"Incoming Software Engineer"}</strong>
@@ -63,7 +63,7 @@ export default function CurrentDoings() {
               ></TextLink>
             </Text>
           </Box>
-        </ListItem>
+        </ListItem> */}
 
         <Divider my={1.5} />
         <ListItem>

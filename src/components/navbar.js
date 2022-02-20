@@ -167,13 +167,6 @@ const NavBar = () => {
                 Resume
               </Button>
             </NextLink>
-
-            {/* <MenuItem to="/">about me</MenuItem> */}
-            {/* <MenuItem to="/resume">resume</MenuItem> */}
-            {/* <MenuItem to="/featured-works">featured works</MenuItem> */}
-            {/* <MenuItem to="/connect-with-me" isLast> */}
-            {/* connect with me */}
-            {/* </MenuItem> */}
           </Flex>
         </Box>
       </Flex>

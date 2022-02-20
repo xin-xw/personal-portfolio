@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useState, useEffect } from "react";
 import React from "react";
-import SocialMediaIcons from "./about-me-social-media-icons";
+import AboutMeContact from "./about-me-contact";
 // import TypeWriter from "../typewriter";
 
 export default function AboutMeHeader() {
@@ -62,9 +62,10 @@ export default function AboutMeHeader() {
             align={isMinWidth ? "right" : "left"}
             mt={isMinWidth ? -5 : 0}
           >
-            {"/about-me"}
+            {/* {"/about-me"} */}
+            {"About Me"}
           </Heading>
-          <SocialMediaIcons />
+          <AboutMeContact />
         </Box>
       </Flex>
     </Stack>

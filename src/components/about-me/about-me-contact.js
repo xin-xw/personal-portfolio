@@ -11,7 +11,7 @@ import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 import { MdAlternateEmail, MdOutlinePictureAsPdf } from "react-icons/md";
 import NextLink from "next/link";
 
-export default function SocialMediaIcons() {
+export default function AboutMeContact() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
   const { colorMode } = useColorMode();
@@ -34,19 +34,12 @@ export default function SocialMediaIcons() {
             borderRadius="sm"
             borderWidth="2px"
             colorScheme="grey"
-            color={colorMode === "light" ? "red.500" : "red.200"}
+            color={colorMode === "light" ? "red.400" : "red.100"}
             variant="outline"
-            fontWeight="normal"
-            // w="max-content"
+            fontWeight="bold"
             border="2px solid transparent"
-            // color="trueGray.500"
-            transition="0.35s ease-out"
-            // _hover={{
-            //   color: colorMode === "light" ? "red.500" : "red.200",
-            //   border: "2px solid",
-            // }}
           >
-            <strong>Mail</strong>
+            e-mail
           </Button>
         </NextLink>
 
@@ -60,18 +53,12 @@ export default function SocialMediaIcons() {
             borderWidth="2px"
             colorScheme="grey"
             variant="outline"
-            fontWeight="normal"
-            // w="max-content"
+            fontWeight="bold"
             border="2px solid transparent"
-            // color="trueGray.500"
-            color={colorMode === "light" ? "blue.600" : "blue.200"}
+            color={colorMode === "light" ? "blue.400" : "blue.100"}
             transition="0.35s ease-out"
-            // _hover={{
-            //   color: colorMode === "light" ? "blue.500" : "blue.200",
-            //   border: "2px solid",
-            // }}
           >
-            <strong>LinkedIn</strong>
+            linkedin
           </Button>
         </NextLink>
 
@@ -85,18 +72,12 @@ export default function SocialMediaIcons() {
             borderWidth="2px"
             colorScheme="grey"
             variant="outline"
-            fontWeight="normal"
-            // w="min-content"
+            fontWeight="bold"
             border="2px solid transparent"
-            // color="trueGray.500"
-            color={colorMode === "light" ? "green.500" : "yellow.200"}
+            color={colorMode === "light" ? "green.400" : "yellow.100"}
             transition="0.35s ease-out"
-            // _hover={{
-            //   color: colorMode === "light" ? "yellow.500" : "yellow.200",
-            //   border: "2px solid",
-            // }}
           >
-            <strong>GitHub</strong>
+            github
           </Button>
         </NextLink>
 
@@ -113,18 +94,11 @@ export default function SocialMediaIcons() {
             borderWidth="2px"
             colorScheme="grey"
             variant="outline"
-            fontWeight="normal"
-            // w="min-content"
+            fontWeight="bold"
             border="2px solid transparent"
-            // color="trueGray.500"
-            color={colorMode === "light" ? "purple.500" : "purple.200"}
-            // transition="0.35s ease-out"
-            // _hover={{
-            //   color: colorMode === "light" ? "purple.500" : "purple.200",
-            //   border: "2px solid",
-            // }}
+            color={colorMode === "light" ? "purple.400" : "purple.100"}
           >
-            <strong>Resume</strong>
+            resume
           </Button>
         </NextLink>
       </SimpleGrid>
