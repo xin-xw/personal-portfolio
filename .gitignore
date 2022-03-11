@@ -38,3 +38,7 @@ yarn-error.log*
 .env
 
 /node_modules/
+
+spotify_api.md
+.vscode/
+.vscode
