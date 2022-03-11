@@ -4,6 +4,8 @@ import { Container } from "../src/components/container";
 import { useState, useEffect } from "react";
 import AboutMeHeader from "../src/components/about-me/about-me-header.js";
 import AboutMeNow from "../src/components/about-me/about-me-music";
+import AboutMeMemories from "../src/components/about-me/about-me-memories";
+import MemoriesData from "../src/components/about-me/memories-data";
 
 export default function Home() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
@@ -25,6 +27,9 @@ export default function Home() {
       </Box>
       <Box w="100%" my={2}>
         <AboutMeNow />
+      </Box>
+      <Box w="100%" my={2}>
+        <AboutMeMemories images={MemoriesData} />
       </Box>
     </Container>
   );

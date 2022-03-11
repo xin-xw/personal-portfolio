@@ -13,30 +13,6 @@ import { CloseIcon, HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
 
-// const MenuItem = ({ children, isLast, to = '/' }) => {
-//   const router = useRouter();
-//   const [curPath, setCurPath] = useState(" ");
-
-//   useEffect(() => {
-//       setCurPath(router.pathname);
-//   }, [router.pathname])
-//   console.log(curPath)
-//   return (
-//     <Text
-//       mb={{ base: isLast ? 0 : 5, sm: 0 }}
-//       mr={{ base: 0, sm: isLast ? 0 : 5 }}
-//       display="block"
-//       // fontWeight="bold"
-//     >
-//       <Link href={to}>
-//         {/* <Button as="a" variant="link" size="md" aria-label={children} color={router.pathname === curPath ? "yellow" : "black"}>
-//           {children}
-//         </Button> */}
-//       </Link>
-//     </Text>
-//   );
-// };
-
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");

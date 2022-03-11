@@ -37,7 +37,7 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
       as="article"
       {...rest}
       mt={2}
-      bgColor={colorMode === "dark" ? "#000" : "#fff"}
+      bgColor={colorMode === "dark" ? "brand.800" : "brand.200"}
     >
       <HStack
         p={5}
@@ -105,122 +105,6 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
         </Box>
       </HStack>
     </LinkBox>
-    // <Flex direction="column">
-    //   <LinkBox
-    //     as="article"
-    //     p={6}
-    //     borderWidth="2px"
-    //     borderRadius="sm"
-    //     {...rest}
-    //     overflow="hidden"
-    //     transition="all 0.4s"
-    //     transition-timing-function="spring(3 100 10 10)"
-    //     _hover={{ transform: "scale(1.025, 1.025)" }}
-    //   >
-    //     <LinkOverlay href={gh_link} isExternal></LinkOverlay>
-    //     {isMinWidth ? (
-    //       <Center>
-    //         <VStack>
-    //           <Box my={1}>
-    //             <Image boxSize="80px" src={icon} alt={title}></Image>
-    //           </Box>
-
-    //           <Text fontWeight="700" fontSize="1.6em">
-    //             {title}
-    //           </Text>
-
-    //           {/* <NextLink href={gh_link} passHref>
-    //             <IconButton
-    //               as="a"
-    //               aria-label="Learn more on GitHub"
-    //               target="_blank"
-    //               borderRadius="sm"
-    //               icon={<FiGithub />}
-    //               variant="outline"
-    //             />
-    //           </NextLink> */}
-    //         </VStack>
-    //       </Center>
-    //     ) : (
-    //       <VStack>
-    //         <Image
-    //           boxSize={90}
-    //           my={2.5}
-    //           src={icon}
-    //           alt={title}
-    //           display={isMinWidth ? "none" : "block"}
-    //         ></Image>
-    //         <Text fontWeight="700" fontSize="1.6em">
-    //           {title}
-    //         </Text>
-    //       </VStack>
-    //     )}
-
-    //     <Flex direction="column">
-    //       <Box p={0}>
-    //         <Box my={3}>
-    //           <Stack isInline overflow={"hidden"} overflowWrap={false} my={3}>
-    //             <Box>
-    //               {tags.map((tag) => (
-    //                 <Tag
-    //                   borderWidth="1.5px"
-    //                   mr={1.5}
-    //                   my={isMinWidth ? ".5" : "1"}
-    //                   key={tag}
-    //                   borderRadius="sm"
-    //                   variant="subtle"
-    //                 >
-    //                   <TagLabel fontSize="xs">{tag}</TagLabel>
-    //                 </Tag>
-    //               ))}
-    //             </Box>
-    //           </Stack>
-    //         </Box>
-    //         <Text my={3} fontSize="md" align="left">
-    //           {desc}
-    //         </Text>
-    //       </Box>
-    //     </Flex>
-    //     {/* <NextLink href={gh_link} passHref>
-    //       <Button
-    //         as="a"
-    //         aria-label="Learn more on GitHub"
-    //         target="_blank"
-    //         borderRadius="sm"
-    //         leftIcon={<FiGithub />}
-    //         variant="outline"
-    //       ><Button/>
-    //     </NextLink> */}
-    //     <NextLink href={gh_link} passHref>
-    //       <Box align="right">
-    //         <Button
-    //           bg="transparent"
-    //           fontSize="md"
-    //           borderRadius={0}
-    //           variant="link"
-    //           pl={0}
-    //           pr={3}
-    //           py={3}
-    //           w="min-content"
-    //           border="2px solid transparent"
-    //           color="trueGray.500"
-    //           fontWeight="regular"
-    //           transition="0.35s ease-out"
-    //           leftIcon={<FiGithub />}
-    //           _hover={{
-    //             border: "2px solid",
-    //             pr: 3,
-    //             pl: 3,
-    //           }}
-    //         >
-    //           <Text fontWeight="bold" size="sm">
-    //             {"Source →"}
-    //           </Text>
-    //         </Button>
-    //       </Box>
-    //     </NextLink>
-    //   </LinkBox>
-    // </Flex>
   );
 }
 

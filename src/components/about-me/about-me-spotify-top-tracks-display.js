@@ -15,38 +15,40 @@ function TrackTemplate({ ranking, song_name, artist_name, spotify_url }) {
   return (
     <LinkBox>
       <Flex direction={"row"}>
-        <HStack
-          overflow={"hidden"}
-          verticalAlign={"center"}
-          transition="all 0.2s"
-          transition-timing-function="spring(3 100 10 10)"
-          _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
-        >
-          <Flex>
-            <HStack>
-              <Box>
-                <Text>{ranking + "."}</Text>
-              </Box>
-              <Spacer />
-              <Flex direction="column">
-                <LinkOverlay href={spotify_url} isExternal></LinkOverlay>
+        <Box>
+          <HStack
+            overflow={"hidden"}
+            verticalAlign={"center"}
+            transition="all 0.2s"
+            transition-timing-function="spring(3 100 10 10)"
+            _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
+          >
+            <Flex>
+              <HStack>
                 <Box>
-                  <Text fontSize="md" fontWeight={"bold"}>
-                    {song_name}
-                  </Text>
+                  <Text fontSize={"lg"}>{ranking + "."}</Text>
                 </Box>
-                <Box>
-                  <Text
-                    color={colorMode === "dark" ? "gray.300" : "gray.700"}
-                    fontSize="xs"
-                  >
-                    {artist_name}
-                  </Text>
-                </Box>
-              </Flex>
-            </HStack>
-          </Flex>
-        </HStack>
+                <Spacer />
+                <Flex direction="column">
+                  <LinkOverlay href={spotify_url} isExternal></LinkOverlay>
+                  <Box>
+                    <Text fontSize="md" fontWeight={"bold"}>
+                      {song_name}
+                    </Text>
+                  </Box>
+                  <Box>
+                    <Text
+                      color={colorMode === "dark" ? "gray.300" : "gray.700"}
+                      fontSize="xs"
+                    >
+                      {artist_name}
+                    </Text>
+                  </Box>
+                </Flex>
+              </HStack>
+            </Flex>
+          </HStack>
+        </Box>
       </Flex>
     </LinkBox>
   );

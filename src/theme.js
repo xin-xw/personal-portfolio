@@ -13,13 +13,21 @@ const breakpoints = createBreakpoints({
 const styles = {
   global: (props) => ({
     body: {
-      bg: mode("#f3f4f6", "#0D1013")(props),
-      color: mode("#0D1013", "#f3f4f6")(props),
+      bg: mode("brand.100", "brand.900")(props),
+      color: mode("brand.900", "brand.100")(props),
     },
   }),
 };
 
 const theme = extendTheme({
+  colors: {
+    brand: {
+      100: "#F3F4F6",
+      200: "#F5F5F5",
+      800: "#0D1013",
+      900: "#0D1013",
+    },
+  },
   config: {
     initialColorMode: "light",
     useSystemColorMode: true,

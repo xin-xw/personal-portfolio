@@ -40,7 +40,7 @@ export default function AboutMeSpotifyRecentSongs() {
     <LinkBox
       my={5}
       alignContent="center"
-      bgColor={colorMode === "dark" ? "#000" : "#fff"}
+      bgColor={colorMode === "dark" ? "brand.800" : "brand.200"}
     >
       <HStack
         p={5}
