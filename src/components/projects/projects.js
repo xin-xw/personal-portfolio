@@ -3,7 +3,7 @@ import { useState } from "react";
 import ProjectCardItem from "./project-card-template";
 
 function ProjectList() {
-  const [isMinWidth, setIsMinWidth] = useState(false);
+  const [isMinWidth] = useState(false);
 
   return (
     <Flex>

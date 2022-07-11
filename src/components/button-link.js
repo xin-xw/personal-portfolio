@@ -6,7 +6,6 @@ export default function ButtonLink({
   website,
   bg_color,
   font_color,
-  ...rest
 }) {
   return (
     <Button variant="solid" bg={bg_color ? bg_color : ""}>

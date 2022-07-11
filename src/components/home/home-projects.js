@@ -14,7 +14,6 @@ import ActionButton from "../action-button";
 import ProjectCardItem from "../projects/project-card-template";
 
 export default function HomeProjects() {
-  const { colorMode } = useColorMode();
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
   const [isMinWidth, setIsMinWidth] = useState(false);
 
