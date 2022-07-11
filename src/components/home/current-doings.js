@@ -35,15 +35,11 @@ export default function CurrentDoings() {
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
-              <strong>
-                {
-                  "Full-time Computer Science with Business Applications Student"
-                }
-              </strong>
+              <strong>{"Software Engineer"}</strong>
               {" @ "}
               <TextLink
-                link="https://www.ucr.edu"
-                name="UCR"
+                link="https://www.vmware.com/"
+                name="VMware"
                 icon={<ExternalLinkIcon />}
               ></TextLink>
             </Text>
@@ -74,21 +70,6 @@ export default function CurrentDoings() {
               <TextLink
                 link="https://www.zybooks.com/about-us/"
                 name="zyBooks"
-                icon={<ExternalLinkIcon />}
-              ></TextLink>
-            </Text>
-          </Box>
-        </ListItem>
-
-        <Divider my={1.5} />
-        <ListItem>
-          <Box textAlign="left" my={1}>
-            <Text>
-              <strong>{"Campus Ambassador"}</strong>
-              {" @ "}
-              <TextLink
-                link="https://simplify.jobs/"
-                name="Simplify"
                 icon={<ExternalLinkIcon />}
               ></TextLink>
             </Text>

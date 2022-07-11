@@ -1,15 +1,15 @@
 import {
   Button,
   Flex,
-  useMediaQuery,
-  useColorMode,
   SimpleGrid,
+  Text,
+  useColorMode,
+  useMediaQuery,
 } from "@chakra-ui/react";
-import React from "react";
-import { useState, useEffect } from "react";
+import NextLink from "next/link";
+import { useEffect, useState } from "react";
 import { FaGithubAlt, FaLinkedinIn } from "react-icons/fa";
 import { MdAlternateEmail, MdOutlinePictureAsPdf } from "react-icons/md";
-import NextLink from "next/link";
 
 export default function AboutMeContact() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
@@ -32,14 +32,21 @@ export default function AboutMeContact() {
             size="md"
             leftIcon={<MdAlternateEmail />}
             borderRadius="sm"
-            borderWidth="2px"
+            borderWidth="1px"
             colorScheme="grey"
-            color={colorMode === "light" ? "red.400" : "red.100"}
             variant="outline"
             fontWeight="bold"
             border="2px solid transparent"
+            _hover={{
+              background: colorMode === "light" ? "red.400" : "red.100",
+              color: colorMode === "light" ? "black" : "black",
+              border: "1px solid",
+              borderColor: "transparent",
+            }}
           >
-            e-mail
+            <Text fontSize="sm" fontWeight="bold">
+              EMAIL
+            </Text>
           </Button>
         </NextLink>
 
@@ -50,15 +57,21 @@ export default function AboutMeContact() {
             size="md"
             leftIcon={<FaLinkedinIn />}
             borderRadius="sm"
-            borderWidth="2px"
+            borderWidth="1px"
             colorScheme="grey"
             variant="outline"
             fontWeight="bold"
             border="2px solid transparent"
-            color={colorMode === "light" ? "blue.400" : "blue.100"}
-            transition="0.35s ease-out"
+            _hover={{
+              background: colorMode === "light" ? "blue.400" : "blue.100",
+              color: colorMode === "light" ? "black" : "black",
+              border: "1px solid",
+              borderColor: "transparent",
+            }}
           >
-            linkedin
+            <Text fontSize="sm" fontWeight="bold">
+              LINKEDIN
+            </Text>
           </Button>
         </NextLink>
 
@@ -69,15 +82,21 @@ export default function AboutMeContact() {
             size="md"
             leftIcon={<FaGithubAlt />}
             borderRadius="sm"
-            borderWidth="2px"
+            borderWidth="1px"
             colorScheme="grey"
             variant="outline"
             fontWeight="bold"
             border="2px solid transparent"
-            color={colorMode === "light" ? "green.400" : "yellow.100"}
-            transition="0.35s ease-out"
+            _hover={{
+              background: colorMode === "light" ? "green.400" : "yellow.100",
+              color: colorMode === "light" ? "black" : "black",
+              border: "1px solid",
+              borderColor: "transparent",
+            }}
           >
-            github
+            <Text fontSize="sm" fontWeight="bold">
+              GITHUB
+            </Text>
           </Button>
         </NextLink>
 
@@ -91,14 +110,21 @@ export default function AboutMeContact() {
             size="md"
             leftIcon={<MdOutlinePictureAsPdf />}
             borderRadius="sm"
-            borderWidth="2px"
+            borderWidth="1px"
             colorScheme="grey"
             variant="outline"
             fontWeight="bold"
             border="2px solid transparent"
-            color={colorMode === "light" ? "purple.400" : "purple.100"}
+            _hover={{
+              background: colorMode === "light" ? "purple.400" : "purple.100",
+              color: colorMode === "light" ? "black" : "black",
+              border: "1px solid",
+              borderColor: "transparent",
+            }}
           >
-            resume
+            <Text fontSize="sm" fontWeight="bold">
+              RESUME
+            </Text>
           </Button>
         </NextLink>
       </SimpleGrid>

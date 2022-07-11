@@ -54,12 +54,6 @@ export default function AboutMeSpotifyRecentSongs() {
         transition-timing-function="spring(3 100 10 10)"
         _hover={{ transform: "translateY(-4px)", shadow: "lg" }}
       >
-        {/* <LinkOverlay
-          href={
-            "https://open.spotify.com/user/8grb62nlus2653d01p4bctwbd?si=0edb0e622a8d4a1d"
-          }
-          isExternal
-        ></LinkOverlay> */}
         <Box p={0} overflow={"hidden"}>
           <Flex direction="row" alignContent={"space-around"}>
             <HStack spacing={2}>

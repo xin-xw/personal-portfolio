@@ -1,38 +1,31 @@
+import ProjectCardItem from "./project-card-template";
 import {
-  Box,
-  Flex,
-  Heading,
+  Tag,
+  TagLabel,
+  VStack,
+  HStack,
   Stack,
+  Heading,
+  Flex,
+  Box,
   Text,
-  useColorMode,
+  Image,
   useMediaQuery,
+  IconButton,
+  Spacer,
+  LinkBox,
+  useColorMode,
 } from "@chakra-ui/react";
-
+import { useState } from "react";
 import NextLink from "next/link";
-import { useEffect, useState } from "react";
 import ActionButton from "../action-button";
-import ProjectCardItem from "../projects/project-card-template";
 
-export default function HomeProjects() {
-  const { colorMode } = useColorMode();
-  const [desktopQuery] = useMediaQuery("(min-width: 700px)");
+function ProjectList() {
   const [isMinWidth, setIsMinWidth] = useState(false);
-
-  useEffect(() => {
-    if (desktopQuery !== isMinWidth) {
-      setIsMinWidth(desktopQuery);
-    }
-  }, [isMinWidth, desktopQuery]);
 
   return (
     <Flex>
       <Stack>
-        <Box my={1}>
-          <Heading fontSize="3xl" fontWeight="bold">
-            Recent projects
-          </Heading>
-        </Box>
-
         <Stack
           direction={isMinWidth ? "column" : "column"}
           spacing={5}
@@ -79,18 +72,24 @@ export default function HomeProjects() {
             ]}
             gh_link={"https://github.com/xinwng/explorify"}
           ></ProjectCardItem>
-        </Stack>
 
-        <Box>
-          <NextLink href={"/projects"} passHref>
-            <ActionButton mt={1.5}>
-              <Text fontWeight="bold" size="sm">
-                {"View all projects →"}
-              </Text>
-            </ActionButton>
-          </NextLink>
-        </Box>
+          <ProjectCardItem
+            title="$plice"
+            desc="Splice was envisioned through yearning for a way that can easily split the bill when dining out with friends or family. Users can select the restaurant they are dining at and the menu for the respective restaurant will display. Each user will select the food they ordered and pass on the device to the next person. At the end, individualized bills will be generated for each user."
+            icon="/media/home/projects-splice-icon.png"
+            tags={[
+              "C++",
+              "Google Test Framework",
+              "CI/CD",
+              "Prototype",
+              "Composite",
+            ]}
+            gh_link={"https://github.com/xinwng/splice"}
+          ></ProjectCardItem>
+        </Stack>
       </Stack>
     </Flex>
   );
 }
+
+export default ProjectList;

@@ -10,6 +10,7 @@ import {
 import { useState, useEffect } from "react";
 import React from "react";
 // import TypeWriter from "../typewriter";
+import ProjectList from "./projects";
 
 export default function ProjectHeader() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
@@ -23,38 +24,40 @@ export default function ProjectHeader() {
 
   return (
     <Stack>
-      <Flex direction={isMinWidth ? "row" : "column"} mt={isMinWidth ? 15 : 0}>
-        {/* Mobile Display */}
-
-        <Image
-          // src="/AvatarImg.jpg"
-          src="./project-xin-profile-mobile.svg"
-          alt="Cartoon Picture Smiling"
-          borderRadius="full"
-          backgroundColor="transparent"
-          boxShadow="none"
-          width="100px"
-          height="160px"
-          mt="3"
-          display={isMinWidth ? "none" : "block"}
-        />
-
-        <Box my={isMinWidth ? 20 : 3}>
-          <Heading fontSize="4xl" fontWeight="bold">
-            {"/projects"}
-          </Heading>
+      <Stack mt={isMinWidth ? 15 : 0}>
+        <Box align={"center"}>
+          <Image
+            src="/media/projects/project-header-img.svg"
+            alt="Project Header Picture"
+            backgroundColor="transparent"
+            boxShadow="none"
+            height="300px"
+            mt="0"
+            display={isMinWidth ? "none" : "block"}
+          />
+        </Box>
+        <Box>
+          <Image
+            src="/media/projects/project-header-img.svg"
+            alt="Profile Picture"
+            backgroundColor="transparent"
+            boxShadow="none"
+            height="385px"
+            mt="-5"
+            mx="auto"
+            display={isMinWidth ? "block" : "none"}
+          />
         </Box>
 
-        <Spacer />
-        <Image
-          src="./project-xin-profile-desktop.svg"
-          alt="Cartoon Picture Smiling"
-          backgroundColor="transparent"
-          boxShadow="none"
-          height="280px"
-          display={isMinWidth ? "block" : "none"}
-        />
-      </Flex>
+        <Box my={isMinWidth ? 10 : 3}>
+          <Heading my={"2"} fontSize="4xl" fontWeight="bold">
+            {"Featured projects"}
+          </Heading>
+        </Box>
+      </Stack>
+      <Box>
+        <ProjectList></ProjectList>
+      </Box>
     </Stack>
   );
 }

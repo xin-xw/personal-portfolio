@@ -12,6 +12,7 @@ import {
 import { CloseIcon, HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import NextLink from "next/link";
+import ButtonLink from "./button-link";
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -69,7 +70,11 @@ const NavBar = () => {
                 fontSize="15px"
                 to="/"
               >
-                {router.pathname === "/" ? <u>Home</u> : <Text>Home</Text>}
+                {router.pathname === "/" ? (
+                  <Text>Home</Text>
+                ) : (
+                  <Text>Home</Text>
+                )}
               </Button>
             </NextLink>
 
@@ -103,6 +108,7 @@ const NavBar = () => {
             </NextLink> */}
 
             {/* <NextLink href="/Xin_Wang_Resume.pdf" passHref> */}
+
             <NextLink href="/about-me" passHref>
               <Button
                 variant={router.pathname === "/about-me" ? "solid" : "ghost"}
@@ -113,10 +119,27 @@ const NavBar = () => {
                 to="/about-me"
               >
                 {router.pathname === "/about-me" ? (
-                  <u>About Me</u>
+                  <Text>About Me</Text>
                 ) : (
                   <Text>About Me</Text>
                 )}
+              </Button>
+            </NextLink>
+
+            <NextLink href="/projects" passHref>
+              <Button
+                variant={router.pathname === "/projects" ? "solid" : "ghost"}
+                fontWeight={router.pathname === "/projects" ? "bold" : "normal"}
+                fontSize="15px"
+                to="/projects"
+              >
+                <Text textDecoration={"none"}>
+                  {router.pathname === "/projects" ? (
+                    <Text>Projects</Text>
+                  ) : (
+                    <Text>Projects</Text>
+                  )}
+                </Text>
               </Button>
             </NextLink>
 

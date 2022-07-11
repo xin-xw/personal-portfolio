@@ -35,6 +35,21 @@ export default function PastDoings() {
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
+              <strong>{"Campus Ambassador"}</strong>
+              {" @ "}
+              <TextLink
+                link="https://simplify.jobs/"
+                name="Simplify"
+                icon={<ExternalLinkIcon />}
+              ></TextLink>
+            </Text>
+          </Box>
+        </ListItem>
+
+        <Divider my={1.5} />
+        <ListItem>
+          <Box textAlign="left" my={1}>
+            <Text>
               <strong>{"Best Valentine's Day Hack & Best Design (UI)"}</strong>
               {" out of 160+ participants @ "}
               <TextLink
