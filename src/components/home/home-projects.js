@@ -4,7 +4,6 @@ import {
   Heading,
   Stack,
   Text,
-  useColorMode,
   useMediaQuery,
 } from "@chakra-ui/react";
 
