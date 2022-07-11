@@ -1,24 +1,6 @@
-import ProjectCardItem from "./project-card-template";
-import {
-  Tag,
-  TagLabel,
-  VStack,
-  HStack,
-  Stack,
-  Heading,
-  Flex,
-  Box,
-  Text,
-  Image,
-  useMediaQuery,
-  IconButton,
-  Spacer,
-  LinkBox,
-  useColorMode,
-} from "@chakra-ui/react";
+import { Flex, Stack } from "@chakra-ui/react";
 import { useState } from "react";
-import NextLink from "next/link";
-import ActionButton from "../action-button";
+import ProjectCardItem from "./project-card-template";
 
 function ProjectList() {
   const [isMinWidth, setIsMinWidth] = useState(false);

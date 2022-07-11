@@ -1,7 +1,8 @@
 import {
   Box,
+  Button,
   HStack,
-  IconButton,
+  Icon,
   Image,
   LinkBox,
   Spacer,
@@ -9,16 +10,13 @@ import {
   Tag,
   TagLabel,
   Text,
-  Button,
-  ButtonGroup,
   useColorMode,
   useColorModeValue,
   useMediaQuery,
   VStack,
-  Icon,
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
 import NextLink from "next/link";
+import { useEffect, useState } from "react";
 import { FiGithub } from "react-icons/fi";
 
 function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {

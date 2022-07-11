@@ -1,14 +1,5 @@
-import {
-  Stack,
-  Heading,
-  Flex,
-  Box,
-  Image,
-  useMediaQuery,
-  Spacer,
-} from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import React from "react";
+import { Box, Heading, Image, Stack, useMediaQuery } from "@chakra-ui/react";
+import { useEffect, useState } from "react";
 // import TypeWriter from "../typewriter";
 import ProjectList from "./projects";
 

@@ -1,4 +1,4 @@
-import { Button, Link, Text, Heading } from "@chakra-ui/react";
+import { Button, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 
 export default function ButtonLink({

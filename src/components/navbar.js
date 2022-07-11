@@ -1,18 +1,17 @@
-import { useState, useEffect } from "react";
+import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
-  Flex,
   Box,
-  Text,
-  IconButton,
   Button,
+  Flex,
+  IconButton,
+  Spacer,
+  Text,
   useColorMode,
   useMediaQuery,
-  Spacer,
 } from "@chakra-ui/react";
-import { CloseIcon, HamburgerIcon, SunIcon, MoonIcon } from "@chakra-ui/icons";
-import { useRouter } from "next/router";
 import NextLink from "next/link";
-import ButtonLink from "./button-link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
