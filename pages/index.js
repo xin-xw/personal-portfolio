@@ -30,10 +30,10 @@ export default function Home() {
         <Bio />
       </Box>
       <Box w="100%" my="3rem">
-        <HomeProjects />
+        <CurrentDoings />
       </Box>
       <Box w="100%" my="3rem">
-        <CurrentDoings />
+        <HomeProjects />
       </Box>
       <Box w="100%" my="3rem">
         <PastDoings />

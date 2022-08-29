@@ -46,8 +46,12 @@ export default function HomeProfile() {
           <Text my={2} fontWeight={"500"}>
             {"Software Engineer @ VMware"}
           </Text>
+          <Text my={2} fontWeight={"500"}>
+            {"☁️ VMware on Cloud (VMC) POD Team"}
+          </Text>
+
           <Text my={2} color={colorMode === "dark" ? "gray.300" : "gray.700"}>
-            📍 San Francisco Bay Area
+            {"📍 San Francisco Bay Area"}
           </Text>
         </Box>
 
