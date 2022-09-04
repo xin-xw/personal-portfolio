@@ -43,15 +43,15 @@ export default function HomeProfile() {
             {"Xin Wang"}
           </Heading>
           {/* <Text my={1.5}>{"Incoming Software Engineer @ VMware"}</Text> */}
-          <Text my={2} fontWeight={"500"}>
-            {"Software Engineer @ VMware"}
+          <Text my={2} fontWeight={"500"} >
+            {"Software Engineer at VMware"}
           </Text>
-          <Text my={2} fontWeight={"500"}>
-            {"☁️ VMware on Cloud (VMC) POD Team"}
+          <Text my={1.5} fontWeight={"500"} >
+            {"VMware Cloud (VMC) Pod Team ☁️"}
           </Text>
 
           <Text my={2} color={colorMode === "dark" ? "gray.300" : "gray.700"}>
-            {"📍 San Francisco Bay Area"}
+            {"San Francisco Bay Area"}
           </Text>
         </Box>
 

@@ -32,7 +32,7 @@ export default function PastDoings() {
       </Box>
 
       <UnorderedList>
-        <ListItem>
+        {/* <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
               <strong>{"Campus Ambassador"}</strong>
@@ -44,7 +44,7 @@ export default function PastDoings() {
               ></TextLink>
             </Text>
           </Box>
-        </ListItem>
+        </ListItem> */}
 
         <Divider my={1.5} />
         <ListItem>
