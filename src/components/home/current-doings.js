@@ -43,7 +43,7 @@ export default function CurrentDoings() {
                 icon={<ExternalLinkIcon />}
               ></TextLink>
               {
-                " on the VMware Cloud (VMC) Pod Team under the Cloud Infrastructure Business Group (CIBG). Throughout my time here, my objective is to develop and ship software-defined data center as a service (SDDCaas) through lifecycle management services (POD). This includes SDDC bring-up, auto-scaling, software-update, and configuration workflows for a variety of cloud platforms including AWS, Alibaba Cloud, Google Cloud Platform, and more"
+                " on the VMware Cloud (VMC) Pod Team, Cloud Infrastructure Business Group (CIBG). Throughout my time here, my objective is to further enable software-defined data center as a service (SDDCaaS) with lifecycle management services (POD)."
               }
             </Text>
           </Box>

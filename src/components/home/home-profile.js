@@ -46,8 +46,8 @@ export default function HomeProfile() {
           <Text my={2} fontWeight={"500"} >
             {"Software Engineer at VMware"}
           </Text>
-          <Text my={1.5} fontWeight={"500"} >
-            {"VMware Cloud (VMC) Pod Team ☁️"}
+          <Text my={1} fontWeight={"500"} >
+            {"Pod Team, Cloud Services ☁️"}
           </Text>
 
           <Text my={2} color={colorMode === "dark" ? "gray.300" : "gray.700"}>

@@ -62,12 +62,12 @@ export default function Bio() {
           <Box textAlign="left">
             <Text>
               {
-                "Outside of work, I enjoy spending time with my friends, traveling, city-exploring, discovering music, and snowboarding (which I recently picked up)! If you want to chat, you can always reach out to me at: "
+                "Outside of work, I enjoy spending time with my friends, traveling, city-exploring, discovering music, and snowboarding (which I recently picked up)! If you want to chat, you can always reach out to me at "
               }
               <u>
                 <TextLink2
-                  link="mailto: xinwng3@gmail.com"
-                  name="xinwng3@gmail.com"
+                  link="mailto: xin@xinw.org"
+                  name="xin@xinw.org"
                   icon={<ExternalLinkIcon />}
                 ></TextLink2>
               </u>

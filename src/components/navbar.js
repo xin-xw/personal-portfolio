@@ -144,7 +144,7 @@ const NavBar = () => {
 
             <NextLink
               href={
-                "https://docs.google.com/document/d/1Bn9X08IqlF0gKhTlndLoVqKNHnDfQH9ue9peZ7Qvalk/edit?usp=sharing"
+                "https://docs.google.com/document/d/1NMOKPUj2bnOsEr9lHlQVk1gquY1f___lRJTzfnOANn0/edit?usp=sharing"
               }
               passHref
             >
@@ -160,7 +160,7 @@ const NavBar = () => {
                 // }
                 fontWeight="normal"
                 fontSize="15px"
-                to="https://docs.google.com/document/d/1Bn9X08IqlF0gKhTlndLoVqKNHnDfQH9ue9peZ7Qvalk/edit?usp=sharing"
+                to="https://docs.google.com/document/d/1NMOKPUj2bnOsEr9lHlQVk1gquY1f___lRJTzfnOANn0/edit?usp=sharing"
               >
                 Resume
               </Button>
