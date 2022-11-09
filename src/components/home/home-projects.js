@@ -21,7 +21,7 @@ export default function HomeProjects() {
   return (
     <Flex>
       <Stack>
-        <Box my={-1}>
+        <Box my={0}>
           <Heading fontSize="3xl" fontWeight="bold">
             Recent projects
           </Heading>

@@ -87,7 +87,7 @@ const NavBar = () => {
 
                   color: colorMode === "dark" ? "brand.100" : "brand.900",
                 }}
-                mx={2}
+                mr={2}
               >
                 {router.pathname === "/" ? (
                   <Text >xinw.org </Text>

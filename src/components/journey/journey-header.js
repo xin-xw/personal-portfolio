@@ -54,7 +54,7 @@ export default function JourneyHeader() {
             boxShadow="none"
             height="385px"
             mt="-20"
-            mx="-6"
+            mx="-4"
             mb="-20"
             display={isMinWidth ? "block" : "none"}
           />
