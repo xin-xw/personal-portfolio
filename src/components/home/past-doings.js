@@ -108,7 +108,7 @@ export default function PastDoings() {
                 // icon={<ExternalLinkIcon />}
               />
               {
-                ", where I researched and designed a payload system leading a group of students, exploring the Venusian atmosphere while abiding by a $250 million budget constraint."
+                " taught me the importance of management, teamwork, and leadership. This experience was when I researched and designed a payload system with a team while leading a sub-group of students. Our mission goal was to explore the Venusian atmosphere and scientifically ideate a system that would survive such environment while abiding by a $250 million budget constraint."
               }
             </Text>
           </Box>
