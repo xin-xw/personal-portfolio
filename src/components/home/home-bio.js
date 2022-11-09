@@ -1,19 +1,9 @@
-import {
-  IconButton,
-  VStack,
-  Stack,
-  Heading,
-  Flex,
-  Box,
-  Text,
-  useMediaQuery,
-  useColorMode,
-} from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import React from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import {
+  Box, Flex, IconButton, Stack, Text, useColorMode, useMediaQuery, VStack
+} from "@chakra-ui/react";
 import NextLink from "next/link";
-import ActionButton from "../action-button";
+import React, { useEffect, useState } from "react";
 
 function TextLink2({ link, name }) {
   const { colorMode } = useColorMode("black", "white");
