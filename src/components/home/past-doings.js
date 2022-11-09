@@ -1,16 +1,7 @@
 import {
-  Heading,
-  Flex,
-  Box,
-  Text,
-  useMediaQuery,
-  Divider,
-  UnorderedList,
-  ListItem,
+  Box, Flex, Heading, ListItem, Text, UnorderedList, useMediaQuery
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import React from "react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import React, { useEffect, useState } from "react";
 import TextLink from "./text-link";
 
 export default function PastDoings() {

@@ -1,14 +1,13 @@
-import { Box, useMediaQuery, Text, Stack, Heading } from "@chakra-ui/react";
-import Profile from "../src/components/home/home-profile";
-import Header from "../src/components/navbar";
-import Bio from "../src/components/home/home-bio";
-import HomeProjects from "../src/components/home/home-projects";
-import CurrentDoings from "../src/components/home/current-doings";
-import PastDoings from "../src/components/home/past-doings";
-import { Container } from "../src/components/container";
-import { useState, useEffect } from "react";
+import { Box, Heading, Stack, Text, useMediaQuery } from "@chakra-ui/react";
 import NextLink from "next/link";
+import { useEffect, useState } from "react";
 import ActionButton from "../src/components/action-button";
+import { Container } from "../src/components/container";
+import CurrentDoings from "../src/components/home/current-doings";
+import Bio from "../src/components/home/home-bio";
+import Profile from "../src/components/home/home-profile";
+import HomeProjects from "../src/components/home/home-projects";
+import Header from "../src/components/navbar";
 
 export default function Home() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");

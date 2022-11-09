@@ -2,14 +2,10 @@ import {
   Box,
   Flex,
   Heading,
-  Stack,
-  Text,
-  useMediaQuery,
+  Stack, useMediaQuery
 } from "@chakra-ui/react";
 
-import NextLink from "next/link";
 import { useEffect, useState } from "react";
-import ActionButton from "../action-button";
 import ProjectCardItem from "../projects/project-card-template";
 
 export default function HomeProjects() {

@@ -1,18 +1,8 @@
 import {
-  Heading,
-  Flex,
-  Box,
-  Text,
-  useMediaQuery,
-  UnorderedList,
-  ListItem,
+  Box, Flex, ListItem, Text, UnorderedList, useMediaQuery
 } from "@chakra-ui/react";
-import { useState, useEffect } from "react";
-import React from "react";
-import { ExternalLinkIcon } from "@chakra-ui/icons";
+import React, { useEffect, useState } from "react";
 import TextLink from "./text-link";
-import NextLink from "next/link";
-import ActionButton from "../action-button";
 
 export default function CurrentDoings() {
   const [desktopQuery] = useMediaQuery("(min-width: 700px)");
