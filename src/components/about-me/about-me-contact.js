@@ -25,7 +25,7 @@ export default function AboutMeContact() {
   return (
     <Flex direction="column" display={["block", "block", "block", "block"]}>
       <SimpleGrid columns={[2, 2, 2, 2]} spacing={5} mt={5}>
-        <NextLink href="mailto: xinwng3@gmail.com" passHref>
+        <NextLink href="mailto: xin@xinw.org" passHref>
           <Button
             as="a"
             target="_blank"
@@ -50,7 +50,7 @@ export default function AboutMeContact() {
           </Button>
         </NextLink>
 
-        <NextLink href="https://www.linkedin.com/in/xinwng" passHref>
+        <NextLink href="https://www.linkedin.com/in/xin-w" passHref>
           <Button
             as="a"
             target="_blank"
@@ -75,7 +75,7 @@ export default function AboutMeContact() {
           </Button>
         </NextLink>
 
-        <NextLink href="https://www.github.com/xinwng" passHref>
+        <NextLink href="https://www.github.com/xinwang-git" passHref>
           <Button
             as="a"
             target="_blank"
@@ -101,7 +101,8 @@ export default function AboutMeContact() {
         </NextLink>
 
         <NextLink
-          href="https://docs.google.com/document/d/1Bn9X08IqlF0gKhTlndLoVqKNHnDfQH9ue9peZ7Qvalk/edit?usp=sharing"
+          // href="https://docs.google.com/document/d/1Bn9X08IqlF0gKhTlndLoVqKNHnDfQH9ue9peZ7Qvalk/edit?usp=sharing"
+          href={"/media/about-me/Xin_Wang_Resume.pdf"}
           passHref
         >
           <Button

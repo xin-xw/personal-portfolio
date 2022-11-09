@@ -56,23 +56,43 @@ const NavBar = () => {
             align="flex-start"
             justify={["flex-start", "space-between", "flex-end", "flex-end"]}
             direction={["column", "row", "row", "row"]}
-            mx={5}
+            mx={15}
             my={0}
             pt={[4, 4, 0, 0]}
           >
             <NextLink href="/" passHref>
               <Button
+                // variant={router.pathname === "/" ? "solid" : "ghost"}
+                // bg={"#fff"}
+                // color={colorMode === "dark" ? "#000" : "normal"}
+                // fontWeight={router.pathname === "/" ? "normal" : "normal"}
+                // borderColor={router.pathname === "/" ? colorMode === "dark" ? "brand.100" : "brand.800" : "ghost"}
+                // bgColor={{ color: colorMode === "dark" ? "#8c92ac" : "#8c92ac" }}
+
+                // _hover={{
+                //   bg: colorMode === "dark" ? "#8c92ac" : "#fff",
+                //   color: colorMode === "dark" ? "brand.900" : "brand.900",
+                // }}
+                // fontSize="15px"
+                // to="/"
+                // mx={3}
                 variant={router.pathname === "/" ? "solid" : "ghost"}
                 // color={router.pathname === '/' ? useColorModeValue("none", "none") : useColorModeValue("#000000", "#ffffff")}
                 fontWeight={router.pathname === "/" ? "bold" : "normal"}
                 // fontWeight="bold"
                 fontSize="15px"
                 to="/"
+                bg={router.pathname === "/" ? colorMode === "dark" ? "brand.800" : "#fff" : "normal"}
+                _hover={{
+
+                  color: colorMode === "dark" ? "brand.100" : "brand.900",
+                }}
+                mx={2}
               >
                 {router.pathname === "/" ? (
-                  <Text>Home</Text>
+                  <Text >xinw.org </Text>
                 ) : (
-                  <Text>Home</Text>
+                    <Text >xinw.org </Text>
                 )}
               </Button>
             </NextLink>
@@ -125,6 +145,23 @@ const NavBar = () => {
               </Button>
             </NextLink>
 
+            <NextLink href="/journey" passHref>
+              <Button
+                variant={router.pathname === "/journey" ? "solid" : "ghost"}
+                // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
+                fontWeight={router.pathname === "/journey" ? "bold" : "normal"}
+                // fontWeight="bold"
+                fontSize="15px"
+                to="/journey"
+              >
+                {router.pathname === "/journey" ? (
+                  <Text>Journey</Text>
+                ) : (
+                  <Text>Journey</Text>
+                )}
+              </Button>
+            </NextLink>
+
             <NextLink href="/projects" passHref>
               <Button
                 variant={router.pathname === "/projects" ? "solid" : "ghost"}
@@ -143,9 +180,10 @@ const NavBar = () => {
             </NextLink>
 
             <NextLink
-              href={
-                "https://docs.google.com/document/d/1NMOKPUj2bnOsEr9lHlQVk1gquY1f___lRJTzfnOANn0/edit?usp=sharing"
-              }
+              // href={
+              //   "https://docs.google.com/document/d/1NMOKPUj2bnOsEr9lHlQVk1gquY1f___lRJTzfnOANn0/edit?usp=sharing"
+              // }
+              href={"/media/about-me/Xin_Wang_Resume.pdf"}
               passHref
             >
               <Button
@@ -154,6 +192,7 @@ const NavBar = () => {
                 variant={
                   router.pathname === "/Xin_Wang_Resume.pdf" ? "solid" : "ghost"
                 }
+
                 // color={router.pathname === './resume' ? useColorModeValue("blue.500", "blue.700") : useColorModeValue("#000000", "#ffffff")}
                 // fontWeight={
                 // router.pathname === "/Xin_Wang_Resume.pdf" ? "bold" : "normal"
@@ -165,6 +204,9 @@ const NavBar = () => {
                 Resume
               </Button>
             </NextLink>
+
+
+
           </Flex>
         </Box>
       </Flex>

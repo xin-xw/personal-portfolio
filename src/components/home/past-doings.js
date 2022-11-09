@@ -27,7 +27,8 @@ export default function PastDoings() {
     <Flex direction="column">
       <Box mb={3}>
         <Heading fontSize="3xl" fontWeight="bold">
-          Past
+          {/* Past experiences 🚌 */}
+          Previously...
         </Heading>
       </Box>
 
@@ -46,85 +47,83 @@ export default function PastDoings() {
           </Box>
         </ListItem> */}
 
-        <Divider my={1.5} />
+        {/* <Divider my={1.5} /> */}
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
               <strong>{"Best Valentine's Day Hack & Best Design (UI)"}</strong>
-              {" out of 160+ participants @ "}
+              {" out of 160+ participants at"}
               <TextLink
                 link="https://hackbu.org"
                 name="HackBU 2022"
-                icon={<ExternalLinkIcon />}
+                // icon={<ExternalLinkIcon />}
               ></TextLink>
               {" for creating "}
               <TextLink
                 link="https://github.com/xinwng/HACKBU2022"
                 name="Spotability"
-                icon={<ExternalLinkIcon />}
+                // icon={<ExternalLinkIcon />}
               ></TextLink>
               {
-                " - an app that attempts to discover and match couples based on each other's music taste, using technologies including React.js, Python, Django, MongoDB"
+                " - an app that attempts to discover and match couples based on each other's music taste, using technologies including React.js, Python, Django, MongoDB."
               }
             </Text>
           </Box>
         </ListItem>
 
-        <Divider my={1.5} />
+        {/* <Divider my={1.5} /> */}
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
-              <strong>Invited Contestant</strong> {" @ "}{" "}
+              <strong>Invited Contestant for</strong> {""}{" "}
               <strong>{"JP Morgan Chase & Co.'s"}</strong>{" "}
               <TextLink
                 link="https://careers.jpmorgan.com/us/en/students/programs/code-for-good"
                 name="Code for Good"
-                icon={<ExternalLinkIcon />}
+                // icon={<ExternalLinkIcon />}
               ></TextLink>
               {
-                " - creating a full-stack app that utilizes: Flask, React.js, and SQLite to iterate, develop, and provide an interface for non-profit organization (GLSEN) that attempts to source bullying and harassment policies across education agencies nationwide"
+                " - where me and 3 other colleagues created a full-stack application utilizing: Flask, React.js, and SQLite to iterate, develop, and provide an interface for non-profit organization, GLSEN. Our goal was to source bullying and harassment policies across education agencies nationwide."
               }
             </Text>
           </Box>
         </ListItem>
 
-        <Divider my={1.5} />
+        {/* <Divider my={1.5} /> */}
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
-              <strong>{"Software Engineer Intern"}</strong>
-              {" @ "}
+              <strong>{"Software Engineer Intern at "}</strong>
               <TextLink
                 link="https://vistendo.com/"
                 name="Vistendo"
-                icon={<ExternalLinkIcon />}
+                // icon={<ExternalLinkIcon />}
               ></TextLink>
               {
-                ", receiving lots of guidance and mentorship learning front-end programming (React.js), AWS, SFTP & SCP protocols - and tying new knowledge and technologies together to help Vistendo progress in their PWA development "
+                " - this is where I received lots of guidance and mentorship practicing full-stack development. This experience allowed me to prosper an expertise within React.js, provided me with exposure in utilizing various AWS solutions, and also led me in grasping intricate knowledge of SFTP & SCP protocols. Combining all of this new information along with the innovative tech stack allowed me to guide Vistendo further along their PWA development progress."
               }
             </Text>
           </Box>
         </ListItem>
 
-        <Divider my={1.5} />
+        {/* <Divider my={1.5} /> */}
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
-              <strong>{"Computer Scientist & Subteam Co-Lead"}</strong>
-              {" @ "}
+              <strong>{"Computer Scientist & Subteam Co-Lead at "}</strong>
               <TextLink
                 link="https://www.lspace.asu.edu/"
                 name="NASA L'Space MCA"
-                icon={<ExternalLinkIcon />}
+                // icon={<ExternalLinkIcon />}
               />
               {
-                " researching and designing a payload system with a group of students, exploring the Venusian atmosphere and abiding by a $250 million budget constraint"
+                ", where I researched and designed a payload system with a group of students, exploring the Venusian atmosphere while abiding by a $250 million budget constraint"
               }
             </Text>
           </Box>
         </ListItem>
 
-        <Divider my={1.5} />
+        {/* <Divider my={1.5} /> */}
       </UnorderedList>
     </Flex>
   );

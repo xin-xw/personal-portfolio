@@ -25,7 +25,7 @@ export default function HomeProjects() {
   return (
     <Flex>
       <Stack>
-        <Box my={1}>
+        <Box my={-1}>
           <Heading fontSize="3xl" fontWeight="bold">
             Recent projects
           </Heading>
@@ -79,15 +79,7 @@ export default function HomeProjects() {
           ></ProjectCardItem>
         </Stack>
 
-        <Box>
-          <NextLink href={"/projects"} passHref>
-            <ActionButton mt={1.5}>
-              <Text fontWeight="bold" size="sm">
-                {"View all projects →"}
-              </Text>
-            </ActionButton>
-          </NextLink>
-        </Box>
+
       </Stack>
     </Flex>
   );

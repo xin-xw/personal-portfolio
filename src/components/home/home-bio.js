@@ -45,11 +45,11 @@ export default function Bio() {
   return (
     <Flex>
       <Stack>
-        <Box my={1}>
+        {/* <Box my={1}>
           <Heading fontSize="3xl" fontWeight="bold">
             Bio
           </Heading>
-        </Box>
+        </Box> */}
         <VStack>
           <Box textAlign="left">
             <Text>
@@ -80,15 +80,7 @@ export default function Bio() {
         <SocialMediaIcons/>
       </Center> */}
 
-        <Box>
-          <NextLink href={"/about-me"} passHref>
-            <ActionButton mt={1.5}>
-              <Text fontWeight="bold" size="sm">
-                {"More about me →"}
-              </Text>
-            </ActionButton>
-          </NextLink>
-        </Box>
+
       </Stack>
     </Flex>
   );
