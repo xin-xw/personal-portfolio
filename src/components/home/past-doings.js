@@ -43,7 +43,7 @@ export default function PastDoings() {
           <Box textAlign="left" my={1}>
             <Text>
               <strong>{"Best Valentine's Day Hack & Best Design (UI)"}</strong>
-              {" out of 160+ participants at"}
+              {" out of 160+ participants at "}
               <TextLink
                 link="https://hackbu.org"
                 name="HackBU 2022"

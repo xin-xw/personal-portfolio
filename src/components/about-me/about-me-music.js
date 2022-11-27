@@ -47,7 +47,7 @@ export default function AboutMeMusic() {
 
       <Box mt={3}>
         <Text fontSize="1.3rem" fontWeight="bold">
-          {"My top tracks for this month"}
+          {"My top tracks for the month"}
         </Text>
         <Box>
           <AboutMeSpotifyTopTracks />

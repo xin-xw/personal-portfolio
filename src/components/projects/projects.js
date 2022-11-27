@@ -14,7 +14,7 @@ function ProjectList() {
           align="center"
         >
           <ProjectCardItem
-            title="ment-to-be"
+            title="Ment-To-Be"
             desc={
               "An application that aims to match computer science students with industry professionals. Our goal for this platform was to provide an open space for students to gain more clarity and guidance towards their future. Students can gain more information about specific fields within the industry such as: front-end, back-end, full stack, machine learning, and more! This is also an open space for any career advice as well as any questions they may have throughout their job/internship recruiting process."
             }

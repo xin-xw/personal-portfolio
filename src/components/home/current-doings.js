@@ -24,7 +24,7 @@ export default function CurrentDoings() {
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
-              <strong>{"Software Engineer, "}</strong>
+              <strong>{"Software Engineer at "}</strong>
               <TextLink
                 link="https://www.vmware.com/"
                 name="VMware"
@@ -56,12 +56,15 @@ export default function CurrentDoings() {
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
-              <strong>{"Content Developer, "}</strong>
+              <strong>{"Content Developer at "}</strong>
               <TextLink
                 link="https://www.zybooks.com/about-us/"
                 name="zyBooks"
                 // icon={<ExternalLinkIcon />}
               ></TextLink>
+              {
+                " - where I review, evaluate, and ensure quality of learning materials including questions, solutions, modules, activities, and other integrated tools."
+              }
             </Text>
           </Box>
         </ListItem>

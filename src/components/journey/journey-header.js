@@ -18,32 +18,7 @@ export default function JourneyHeader() {
 
   return (
     <Stack>
-      <Stack mt={isMinWidth ? 15 : 0}>
-        <Box mt={-3} mb={-2}>
-          <Heading fontSize="3xl" fontWeight="bold">
-            {"Currently,"}
-          </Heading>
-        </Box>
-        <Box w="100%" my="3rem">
-          <CurrentDoings />
-        </Box>
-        <Box align={"center"}>
-          <Image
-            src={
-              colorMode === "dark"
-                ? "/media/journey/journey-night.svg"
-                : "/media/journey/journey.svg"
-            }
-            alt="Journey image"
-            backgroundColor="transparent"
-            boxShadow="none"
-            height="150px"
-            mt="0"
-            display={isMinWidth ? "none" : "block"}
-          />
-        </Box>
-        <Box>
-          <Image
+    <Image
             src={
               colorMode === "dark"
                 ? "/media/journey/journey-night.svg"
@@ -54,10 +29,39 @@ export default function JourneyHeader() {
             boxShadow="none"
             height="385px"
             mt="-20"
-            mx="-4"
+            mx="-3"
             mb="-20"
             display={isMinWidth ? "block" : "none"}
           />
+
+          <Image
+            src={
+              colorMode === "dark"
+                ? "/media/journey/journey-night.svg"
+                : "/media/journey/journey.svg"
+            }
+            alt="Journey image"
+            backgroundColor="transparent"
+            boxShadow="none"
+            height="200px"
+            display={isMinWidth ? "none" : "block"}
+
+          />
+
+      <Stack mt={isMinWidth ? 15 : 0}>
+        <Box mt={-3} mb={-2}>
+          <Heading fontSize="3xl" fontWeight="bold">
+            {"Currently"}
+          </Heading>
+        </Box>
+        <Box w="100%" my="3rem">
+          <CurrentDoings />
+        </Box>
+        <Box align={"center"}>
+
+        </Box>
+        <Box>
+
         </Box>
         <Box my={isMinWidth ? 0 : 0}>
           {/* <Heading my={"0"} fontSize="4xl" fontWeight="bold" textAlign={"right"}>

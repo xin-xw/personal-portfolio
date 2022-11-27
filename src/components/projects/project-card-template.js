@@ -5,6 +5,7 @@ import {
   Icon,
   Image,
   LinkBox,
+  Center,
   Spacer,
   Stack,
   Tag,
@@ -34,30 +35,37 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
     <LinkBox
       as="article"
       {...rest}
-      mt={2}
+      mt={3}
       bgColor={colorMode === "dark" ? "brand.800" : "brand.200"}
     >
-      <HStack
-        p={5}
-        borderWidth="2px"
-        borderRadius="sm"
+      <Stack
+        p={0}
+
         overflow={"hidden"}
         textAlign="left"
-        spacing={4}
+        spacing={0}
       >
-        <Box p={2} position="relative" overflow={"hidden"}>
+        <Box
+        // p={2}
+        position="relative"
+        overflow={"hidden"}>
           <HStack>
             <Box mb={3}>
-              <Image
-                height="45px"
-                width="45px"
+            <HStack>
+                                    <Image
+                                    mt={-1}
+                height="27px"
+                width="27px"
                 layout="fixed"
                 src={icon}
                 alt={title}
               ></Image>
-              <Text my={1} fontWeight="bold" fontSize="2xl">
+                    <Text my={1} fontWeight="bold" fontSize="2xl">
+
                 {title}
               </Text>
+            </HStack>
+
             </Box>
             <Spacer></Spacer>
             <Box>
@@ -68,11 +76,12 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
                   rel="noopener noreferrer"
                 >
                   <Button
+                    mb={-7}
                     variant="outline"
                     alignItems="center"
                     position={"relative"}
                     cursor="pointer"
-                    border={"1px solid"}
+                    // border={"1px solid"}
                     borderRadius={"3px"}
                     borderColor={github_border_colors}
                     textTransform={"uppercase"}
@@ -80,7 +89,7 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
                     transition={"all .2s ease"}
                     transition-timing-function="spring(4 100 10 10)"
                     _hover={{
-                      transform: "translateY(-3px)",
+                      transform: "translateY(-2px)",
                       shadow: "lg",
                     }}
                   >
@@ -93,20 +102,15 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
 
                       <Icon as={FiGithub} align={"center"} boxSize={"18px"} />
                     </HStack>
+
                   </Button>
                 </NextLink>
               </VStack>
             </Box>
-          </HStack>
 
-          <VStack align="start" justify="flex-start">
-            <HStack>
-              <Stack>
-                <Text mt={isMinWidth ? "0" : "1"} fontSize="md">
-                  {desc}
-                </Text>
-                <Stack isInline overflow={"hidden"} overflowWrap={false}>
-                  <Box my={2}>
+          </HStack>
+     <Stack isInline overflow={"hidden"} overflowWrap={false}>
+                  <Box mb={4} mt={0}>
                     {tags.map((tag) => (
                       <Tag
                         key={tag}
@@ -124,11 +128,22 @@ function ProjectCardItem({ title, desc, icon, tags, gh_link, ...rest }) {
                     ))}
                   </Box>
                 </Stack>
+          <VStack align="start" justify="flex-start">
+
+            <HStack>
+              <Stack>
+                <Text mt={isMinWidth ? "0" : "1"} fontSize="md">
+                  {desc}
+                </Text>
+
               </Stack>
             </HStack>
           </VStack>
         </Box>
-      </HStack>
+      </Stack>
+      <Center mt={4} mb={3}>
+        — ✽ —
+      </Center>
     </LinkBox>
   );
 }

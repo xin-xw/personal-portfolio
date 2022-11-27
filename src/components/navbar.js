@@ -1,5 +1,6 @@
 import { CloseIcon, HamburgerIcon, MoonIcon, SunIcon } from "@chakra-ui/icons";
 import {
+  Icon,
   Box,
   Button,
   Flex,
@@ -12,6 +13,7 @@ import {
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { GoHome } from "react-icons/Go";
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -56,12 +58,16 @@ const NavBar = () => {
             align="flex-start"
             justify={["flex-start", "space-between", "flex-end", "flex-end"]}
             direction={["column", "row", "row", "row"]}
-            mx={15}
+            mx={25}
             my={0}
             pt={[4, 4, 0, 0]}
           >
             <NextLink href="/" passHref>
               <Button
+              ml={3}
+
+              justify={"center"}
+              borderRadius={3}
                 // variant={router.pathname === "/" ? "solid" : "ghost"}
                 // bg={"#fff"}
                 // color={colorMode === "dark" ? "#000" : "normal"}
@@ -80,19 +86,20 @@ const NavBar = () => {
                 // color={router.pathname === '/' ? useColorModeValue("none", "none") : useColorModeValue("#000000", "#ffffff")}
                 fontWeight={router.pathname === "/" ? "bold" : "normal"}
                 // fontWeight="bold"
-                fontSize="15px"
+                justifyContent={"center"}
                 to="/"
-                bg={router.pathname === "/" ? colorMode === "dark" ? "brand.800" : "#fff" : "normal"}
+                // bg={router.pathname === "/" ? colorMode === "dark" ? "brand.800" : "" : "#000"}
+                bg={router.pathname === "/" ? (colorMode === "dark" ? "#3a3a3e" :"#ebebeb") : "none"}
                 _hover={{
 
                   color: colorMode === "dark" ? "brand.100" : "brand.900",
                 }}
-                mr={2}
+
               >
                 {router.pathname === "/" ? (
-                  <Text >xinw.org </Text>
+                  <Text><Icon mb={-1} as={GoHome} align={"center"} boxSize={"20px"}  /></Text>
                 ) : (
-                    <Text >xinw.org </Text>
+                  <Text><Icon mb={-1} as={GoHome} align={"center"} boxSize={"20px"} /></Text>
                 )}
               </Button>
             </NextLink>
@@ -130,6 +137,7 @@ const NavBar = () => {
 
             <NextLink href="/about-me" passHref>
               <Button
+              mx={1}
                 variant={router.pathname === "/about-me" ? "solid" : "ghost"}
                 // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
                 fontWeight={router.pathname === "/about-me" ? "bold" : "normal"}
@@ -137,8 +145,10 @@ const NavBar = () => {
                 fontSize="15px"
                 to="/about-me"
               >
+
                 {router.pathname === "/about-me" ? (
-                  <Text>About Me</Text>
+
+                   <Text>About Me</Text>
                 ) : (
                   <Text>About Me</Text>
                 )}
@@ -147,6 +157,7 @@ const NavBar = () => {
 
             <NextLink href="/journey" passHref>
               <Button
+                            mx={1}
                 variant={router.pathname === "/journey" ? "solid" : "ghost"}
                 // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
                 fontWeight={router.pathname === "/journey" ? "bold" : "normal"}
@@ -187,6 +198,7 @@ const NavBar = () => {
               passHref
             >
               <Button
+                            mx={1}
                 as="a"
                 target="_blank"
                 variant={
@@ -219,6 +231,7 @@ const NavBar = () => {
         onClick={toggleColorMode}
         borderRadius="sm"
         variant="outline"
+        border={0}
       />
     </Flex>
   );

@@ -41,7 +41,7 @@ export default function ProjectHeader() {
         </Box>
 
         <Box my={isMinWidth ? 10 : 3}>
-          <Heading my={"2"} fontSize="4xl" fontWeight="bold">
+          <Heading my={"2"} fontSize="3xl" fontWeight="bold">
             {"Featured projects"}
           </Heading>
         </Box>

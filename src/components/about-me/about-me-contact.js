@@ -45,7 +45,7 @@ export default function AboutMeContact() {
             }}
           >
             <Text fontSize="sm" fontWeight="bold">
-              EMAIL
+              {"Send an email"}
             </Text>
           </Button>
         </NextLink>
@@ -70,7 +70,7 @@ export default function AboutMeContact() {
             }}
           >
             <Text fontSize="sm" fontWeight="bold">
-              LINKEDIN
+              {"View LinkedIn"}
             </Text>
           </Button>
         </NextLink>
@@ -95,7 +95,7 @@ export default function AboutMeContact() {
             }}
           >
             <Text fontSize="sm" fontWeight="bold">
-              GITHUB
+              {"View GitHub"}
             </Text>
           </Button>
         </NextLink>
@@ -124,7 +124,7 @@ export default function AboutMeContact() {
             }}
           >
             <Text fontSize="sm" fontWeight="bold">
-              RESUME
+              {"View resume"}
             </Text>
           </Button>
         </NextLink>
