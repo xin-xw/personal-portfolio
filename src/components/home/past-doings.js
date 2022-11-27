@@ -91,7 +91,7 @@ export default function PastDoings() {
                 // icon={<ExternalLinkIcon />}
               ></TextLink>
               {
-                " - was a very valuable experience as I received lots of guidance and mentorship learning and practicing full-stack development. This experience allowed me to prosper an expertise within React.js, provided me with exposure in utilizing various AWS solutions, and also led me in grasping intricate knowledge of SFTP & SCP protocols. Combining all of this new information along with the innovative tech stack allowed me to guide Vistendo further along their PWA development progress."
+                " - a very valuable experience where I received guidance and mentorship learning and practicing full-stack development. This experience allowed me to prosper an expertise in React.js, provided me with exposure in utilizing various AWS solutions, and also led me to grasp intricate knowledge of SFTP & SCP protocols. Combining all of this new information in conjunction to the innovative tech stack allowed me to aid Vistendo further along their PWA development progress."
               }
             </Text>
           </Box>
