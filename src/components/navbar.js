@@ -13,7 +13,7 @@ import {
 import NextLink from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { GoHome } from "react-icons/Go";
+import { GoHome } from "react-icons/go";
 
 const NavBar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
