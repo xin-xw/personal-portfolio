@@ -64,10 +64,9 @@ const NavBar = () => {
           >
             <NextLink href="/" passHref>
               <Button
-              ml={3}
-
-              justify={"center"}
-              borderRadius={3}
+                ml={3}
+                justify={"center"}
+                borderRadius={3}
                 // variant={router.pathname === "/" ? "solid" : "ghost"}
                 // bg={"#fff"}
                 // color={colorMode === "dark" ? "#000" : "normal"}
@@ -89,17 +88,35 @@ const NavBar = () => {
                 justifyContent={"center"}
                 to="/"
                 // bg={router.pathname === "/" ? colorMode === "dark" ? "brand.800" : "" : "#000"}
-                bg={router.pathname === "/" ? (colorMode === "dark" ? "#3a3a3e" :"#ebebeb") : "none"}
+                bg={
+                  router.pathname === "/"
+                    ? colorMode === "dark"
+                      ? "#3a3a3e"
+                      : "#ebebeb"
+                    : "none"
+                }
                 _hover={{
-
                   color: colorMode === "dark" ? "brand.100" : "brand.900",
                 }}
-
               >
                 {router.pathname === "/" ? (
-                  <Text><Icon mb={-1} as={GoHome} align={"center"} boxSize={"20px"}  /></Text>
+                  <Text>
+                    <Icon
+                      mb={-1}
+                      as={GoHome}
+                      align={"center"}
+                      boxSize={"20px"}
+                    />
+                  </Text>
                 ) : (
-                  <Text><Icon mb={-1} as={GoHome} align={"center"} boxSize={"20px"} /></Text>
+                  <Text>
+                    <Icon
+                      mb={-1}
+                      as={GoHome}
+                      align={"center"}
+                      boxSize={"20px"}
+                    />
+                  </Text>
                 )}
               </Button>
             </NextLink>
@@ -137,7 +154,7 @@ const NavBar = () => {
 
             <NextLink href="/about-me" passHref>
               <Button
-              mx={1}
+                mx={1}
                 variant={router.pathname === "/about-me" ? "solid" : "ghost"}
                 // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
                 fontWeight={router.pathname === "/about-me" ? "bold" : "normal"}
@@ -145,10 +162,8 @@ const NavBar = () => {
                 fontSize="15px"
                 to="/about-me"
               >
-
                 {router.pathname === "/about-me" ? (
-
-                   <Text>About Me</Text>
+                  <Text>About Me</Text>
                 ) : (
                   <Text>About Me</Text>
                 )}
@@ -157,7 +172,7 @@ const NavBar = () => {
 
             <NextLink href="/journey" passHref>
               <Button
-                            mx={1}
+                mx={1}
                 variant={router.pathname === "/journey" ? "solid" : "ghost"}
                 // color={router.pathname === './connect-with-me' ? useColorModeValue("blue.300", "blue.700") : useColorModeValue("#000000", "#ffffff")}
                 fontWeight={router.pathname === "/journey" ? "bold" : "normal"}
@@ -191,34 +206,30 @@ const NavBar = () => {
             </NextLink>
 
             <NextLink
-              // href={
-              //   "https://docs.google.com/document/d/1NMOKPUj2bnOsEr9lHlQVk1gquY1f___lRJTzfnOANn0/edit?usp=sharing"
-              // }
-              href={"/media/about-me/Xin_Wang_Resume.pdf"}
+              href={
+                "https://docs.google.com/document/d/1Ld-drRK9V-yjHRZtF-PoIMOLE2WeN2Xz2JhVvVXU2S4/edit?usp=sharing"
+              }
+              // href={"/media/about-me/Xin_Wang_Resume.pdf"}
               passHref
             >
               <Button
-                            mx={1}
+                mx={1}
                 as="a"
                 target="_blank"
                 variant={
                   router.pathname === "/Xin_Wang_Resume.pdf" ? "solid" : "ghost"
                 }
-
                 // color={router.pathname === './resume' ? useColorModeValue("blue.500", "blue.700") : useColorModeValue("#000000", "#ffffff")}
                 // fontWeight={
                 // router.pathname === "/Xin_Wang_Resume.pdf" ? "bold" : "normal"
                 // }
                 fontWeight="normal"
                 fontSize="15px"
-                to="https://docs.google.com/document/d/1NMOKPUj2bnOsEr9lHlQVk1gquY1f___lRJTzfnOANn0/edit?usp=sharing"
+                to="https://docs.google.com/document/d/1Ld-drRK9V-yjHRZtF-PoIMOLE2WeN2Xz2JhVvVXU2S4/edit?usp=sharing"
               >
                 Resume
               </Button>
             </NextLink>
-
-
-
           </Flex>
         </Box>
       </Flex>

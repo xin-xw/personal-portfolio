@@ -42,3 +42,5 @@ yarn-error.log*
 spotify_api.md
 .vscode/
 .vscode
+
+.history/

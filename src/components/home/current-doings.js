@@ -1,5 +1,10 @@
 import {
-  Box, Flex, ListItem, Text, UnorderedList, useMediaQuery
+  Box,
+  Flex,
+  ListItem,
+  Text,
+  UnorderedList,
+  useMediaQuery,
 } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import TextLink from "./text-link";
@@ -16,11 +21,23 @@ export default function CurrentDoings() {
 
   return (
     <Flex direction="column">
-      <Box mt={0} mb={3}>
-
-      </Box>
+      <Box mt={0} mb={3}></Box>
 
       <UnorderedList>
+        <ListItem>
+          <Box textAlign="left" my={1}>
+            <Text>
+              <strong>
+                {"Pursuing a Master's degree in Computer Science at "}
+              </strong>
+              <TextLink
+                link="https://www.gatech.edu/"
+                name="Georgia Institute of Technology"
+                // icon={<ExternalLinkIcon />}
+              ></TextLink>
+            </Text>
+          </Box>
+        </ListItem>
         <ListItem>
           <Box textAlign="left" my={1}>
             <Text>
@@ -71,8 +88,6 @@ export default function CurrentDoings() {
 
         {/* <Divider my={1.5} /> */}
       </UnorderedList>
-
-
     </Flex>
   );
 }
